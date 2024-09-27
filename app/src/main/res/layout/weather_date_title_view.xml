@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/title_badge"
+        style="?attr/browseTitleIconStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/lb_browse_title_icon_height"
+        android:layout_gravity="center_vertical|end"
+        android:adjustViewBounds="true"
+        android:maxWidth="@dimen/lb_browse_title_icon_max_width"
+        android:src="@null"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/title_text"
+        style="?attr/browseTitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/lb_browse_title_height"
+        android:layout_gravity="center_vertical|end" />
+
+    <androidx.leanback.widget.SearchOrbView
+        android:id="@+id/title_orb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:transitionGroup="true"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/right_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end">
+
+        <TextClock
+            android:id="@+id/title_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/text_clock_right_margin"
+            android:format12Hour="hh:mm:ss a EEEE MMMM/dd/yyyy "
+            android:textSize="@dimen/clock_text_size"
+            tools:text="hh:mm:ss a EEEE MMMM/dd/yyyy" />
+
+        <ImageButton
+            android:id="@+id/title_settings"
+            android:layout_width="@dimen/settings_item_width"
+            android:layout_height="@dimen/settings_item_width"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/selector_top_button"
+            android:contentDescription="@string/power_off"
+            android:focusable="true"
+            android:nextFocusDown="@id/main_browse_fragment"
+            android:padding="@dimen/settings_item_padding"
+            android:scaleType="centerCrop"
+            android:src="@drawable/settings_item" />
+
+        <ImageButton
+            android:id="@+id/title_clean"
+            android:layout_width="@dimen/settings_item_width"
+            android:layout_height="@dimen/settings_item_width"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/selector_top_button"
+            android:contentDescription="@string/power_off"
+            android:focusable="true"
+            android:nextFocusDown="@id/main_browse_fragment"
+            android:padding="@dimen/settings_item_padding"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_clean_item" />
+
+        <ImageButton
+            android:id="@+id/title_sound"
+            android:layout_width="@dimen/settings_item_width"
+            android:layout_height="@dimen/settings_item_width"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/selector_top_button"
+            android:contentDescription="@string/power_off"
+            android:focusable="true"
+            android:nextFocusDown="@id/main_browse_fragment"
+            android:padding="@dimen/settings_item_padding"
+            android:scaleType="centerCrop"
+            android:src="@drawable/audio" />
+
+        <ImageButton
+            android:id="@+id/net_plus_tv"
+            android:layout_width="@dimen/settings_item_width"
+            android:layout_height="@dimen/settings_item_width"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/selector_top_button"
+            android:contentDescription="@string/power_off"
+            android:focusable="true"
+            android:nextFocusDown="@id/main_browse_fragment"
+            android:padding="@dimen/settings_item_padding"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_team_viewer" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/info"-->
+<!--            android:layout_width="@dimen/settings_item_width"-->
+<!--            android:layout_height="@dimen/settings_item_width"-->
+<!--            android:layout_marginEnd="4dp"-->
+<!--            android:background="@drawable/selector_top_button"-->
+<!--            android:contentDescription="@string/info"-->
+<!--            android:focusable="true"-->
+<!--            android:nextFocusDown="@id/main_browse_fragment"-->
+<!--            android:padding="@dimen/settings_item_padding"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/ic_info" />-->
+
+        <ImageButton
+            android:id="@+id/adjust_screen"
+            android:layout_width="@dimen/settings_item_width"
+            android:layout_height="@dimen/settings_item_width"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/selector_top_button"
+            android:contentDescription="@string/info"
+            android:focusable="true"
+            android:nextFocusDown="@id/main_browse_fragment"
+            android:padding="@dimen/settings_item_padding"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_adjust_screen" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/account_profile"-->
+<!--            android:layout_width="@dimen/settings_item_width"-->
+<!--            android:layout_height="@dimen/settings_item_width"-->
+<!--            android:layout_marginEnd="6dp"-->
+<!--            android:background="@drawable/selector_top_button"-->
+<!--            android:contentDescription="@string/info"-->
+<!--            android:focusable="true"-->
+<!--            android:nextFocusDown="@id/main_browse_fragment"-->
+<!--            android:padding="@dimen/settings_item_padding"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/title_account_profile" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/left_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <ImageButton
+            android:id="@+id/power_off"
+            android:layout_width="130dp"
+            android:layout_height="90dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/selector_top_button"
+            android:contentDescription="@string/power_off"
+            android:focusable="true"
+            android:padding="@dimen/power_button_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_power_off" />
+    </LinearLayout>
+</merge>

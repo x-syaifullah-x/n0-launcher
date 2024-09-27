@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">N0render Launch</string>
+    <string name="related_radio">Related Radio</string>
+    <string name="related_news">Related News</string>
+    <string name="related_ads">Related ADS</string>
+    <string name="error_fragment">Error Fragment</string>
+    <string name="play_video">Play</string>
+    <string name="umn">N0RENDER</string>
+    <string name="kids">E-KIDS</string>
+    <string name="games">GAMES</string>
+    <string name="radio">RADIO/WORKOUT</string>
+    <string name="asian_series">ASIAN MEDIA</string>
+    <string name="auto_payment">TOOLS</string>
+    <string name="news">NEWS / MEDIA</string>
+    <string name="utility">UTILITIES</string>
+    <string name="image">SUPPORT</string>
+    <string name="app">APPS</string>
+    <string name="error_fragment_message">An error occurred</string>
+    <string name="dismiss_error">Dismiss</string>
+    <string name="power_off">power off</string>
+    <string name="background">https://umntvdealers.net/wordpress/launcher pix/UMNTV/65678854.jpg</string>
+    <string name="info">info</string>
+</resources>

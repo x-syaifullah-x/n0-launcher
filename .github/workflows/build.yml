@@ -1,0 +1,62 @@
+name: build
+
+on:
+  push:
+    branches: [ net.n0ender.com ]
+#  pull_request:
+#    branches: [ started ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      JAVA_HOME: ${{ github.workspace }}/JBR
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "oracle"
+
+      - name: Setup gradle properties
+        run: |
+          ORG_GRADLE_JVM=`cat gradle.properties | grep org.gradle.jvmargs`
+          sed -i 's/'"${ORG_GRADLE_JVM}"'/org.gradle.jvmargs=-Xmx8192m -Dfile.encoding=UTF-8/g' gradle.properties
+          cat gradle.properties
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Run gradlew build
+        run: ./gradlew clean build
+      - name: Upload directory outputs
+        uses: actions/upload-artifact@v3
+        with:
+          name: outputs
+          path: app/build/outputs
+
+      - name: Run gradlew assemble debug
+        run: ./gradlew clean assembleDebug
+      - name: Upload apk debug
+        uses: actions/upload-artifact@v3
+        with:
+          name: apk-debug
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Run gradlew assemble release
+        run: ./gradlew clean assembleRelease
+      - name: Upload apk release
+        uses: actions/upload-artifact@v3
+        with:
+          name: apk-release
+          path: app/build/outputs/apk/release/app-release.apk
+
+      - name: Run gradlew bundle release
+        run: ./gradlew clean bundleRelease
+      - name: Upload aab release
+        uses: actions/upload-artifact@v3
+        with:
+          name: aab-release
+          path: app/build/outputs/bundle/release/app-release.aab

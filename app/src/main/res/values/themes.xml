@@ -1,0 +1,63 @@
+<resources>
+
+    <style name="Theme.Launcher" parent="Theme.Leanback">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.Browse" parent="@style/Theme.Leanback.Browse">
+        <item name="rowHeaderStyle">@style/Widget.Leanback.Row.CustomHeader</item>
+        <item name="imageCardViewStyle">@style/Widget.Leanback.RectImageCardViewStyle</item>
+        <item name="imageCardViewImageStyle">@style/Widget.Leanback.RectImageCardView.ImageStyle
+        </item>
+        <item name="imageCardViewTitleStyle">@style/Widget.Leanback.RectImageCardView.TitleStyle
+        </item>
+
+        <item name="browseTitleViewLayout">@layout/title_view</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.AppDrawer" parent="@style/Theme.Leanback.Browse">
+        <item name="imageCardViewStyle">@style/Widget.Leanback.RectImageCardViewStyle</item>
+        <item name="imageCardViewImageStyle">@style/Widget.Leanback.DrawerImageCardView.ImageStyle
+        </item>
+        <item name="imageCardViewTitleStyle">@style/Widget.Leanback.RectImageCardView.TitleStyle
+        </item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.FullScreen" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Widget.Leanback.RectImageCardViewStyle" parent="Widget.Leanback.ImageCardViewStyle">
+        <!-- In order to keep backward compatibility we have to create an icon on right. -->
+        <item name="lbImageCardViewType">Title</item>
+    </style>
+
+    <style name="Widget.Leanback.RectImageCardView.ImageStyle" parent="Widget.Leanback.ImageCardView.ImageStyle">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:background">@color/browse_image_card_background</item>
+        <item name="android:layout_width">@dimen/browse_image_card_width</item>
+        <item name="android:layout_height">@dimen/browse_image_card_height</item>
+    </style>
+
+    <style name="Widget.Leanback.DrawerImageCardView.ImageStyle" parent="Widget.Leanback.RectImageCardView.ImageStyle">
+        <item name="android:layout_width">@dimen/drawer_image_card_width</item>
+        <item name="android:layout_height">@dimen/drawer_image_card_height</item>
+    </style>
+
+    <style name="Widget.Leanback.RectImageCardView.TitleStyle" parent="Widget.Leanback.ImageCardView.TitleStyle">
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Widget.Leanback.Row.CustomHeader" parent="Widget.Leanback.Row.Header">
+        <item name="android:textSize">24sp</item>
+    </style>
+</resources>

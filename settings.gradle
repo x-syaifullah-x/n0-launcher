@@ -1,0 +1,11 @@
+rootProject.name = "N0 Launcher-( net.n0ender.com )"
+include (
+        ":app",
+)
+
+//https://docs.gradle.org/current/userguide/build_cache.html
+buildCache {
+    local {
+        directory = new File("${rootDir}/.gradle", "build-cache")
+    }
+}
