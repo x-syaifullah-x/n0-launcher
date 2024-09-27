@@ -9,6 +9,8 @@ import java.util.List;
 
 public class DataSource {
 
+    public static final String PACKAGE_ASIAN_LIVE_CHAT = "tv.lets.asian";
+
     private static final OverviewItem ITEM_JADE_CINEMA = new OverviewItem(
             R.drawable.asian_media_jade_cinema_ic,
             R.drawable.ic_asian_media_jade_cinema_detail_bg,
@@ -46,7 +48,7 @@ public class DataSource {
             "Jade Cinema 18 + live chat allows users to view and chat with live Asian women, men, and couples. It also gives you an unlimited supply of xxx, videos, movies, and clips.<br/>Users must be 18 years of age or older.",
             new ApkData(
                     "https://n0render.com/N0Launcher/Kodi/Asian_Chat_1.apk",
-                    "tv.lets.asian",
+                    PACKAGE_ASIAN_LIVE_CHAT,
                     true
             )
     );

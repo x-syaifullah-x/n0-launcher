@@ -31,9 +31,13 @@ public class AppDataManage {
             "com.ndcsolution.androidtv.leankeykeyboard",
             "com.furnaghan.android.photoscreensaver",
             com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DataSource.XXX_CHINESE_MEDIA_PACKAGE_NAME,
+            com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DataSource.PACKAGE_ASIAN_LIVE_CHAT,
             DataSource.PACKAGE_NAME_N0_BROWSER,
             DataSource.PACKAGE_NAME_GAME_BROWSER,
-            DataSource.PACKAGE_NAME_NO_RENDER
+            DataSource.PACKAGE_NAME_NO_RENDER,
+            com.umntv.launcher.main.row.n0_render.media_center.DataSource.PACKAGE_NAME_18_PLUS_LIVE_CHAT,
+            "n0.saver.render",
+            com.umntv.launcher.main.row.games.retro_center.DataSource.PACKAGE_NAME_RETRO_MODE
     );
 
     public static ArrayList<Card> getLaunchAppList(Context mContext) {

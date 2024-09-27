@@ -9,6 +9,8 @@ import net.n0ender.com.R;
 
 public class DataSource {
 
+    public static final String PACKAGE_NAME_MY_ACCOUNT = "net.n0.render";
+
     private static final OverviewItem MY_ACCOUNT = new OverviewItem(
             R.drawable.ic_umn_tv_network_detail_whats_new_account,
             R.drawable.ic_umn_tv_network_detail_whats_new_account,
@@ -18,7 +20,7 @@ public class DataSource {
             "",
             new ApkData(
                     "https://n0render.com/N0Launcher/N0accounting.apk",
-                    "net.n0.render",
+                    PACKAGE_NAME_MY_ACCOUNT,
                     false
             )
     );

@@ -74,6 +74,8 @@ public class DataSource {
     private static final String SUB_TITLE_RETRO_MODE = "Datadogs Communications | EmuELEC | LIBERELEC";
     private static final String BODY_RETRO_MODE = "N0Render Retro Mode is a EmuELEC platform that allows users to turn their devices into a super retro console.<br/>This application is still in beta. You must see instructions before engagement.<br><br>Special Thanks to: Muhammad Usama Nazir";
 
+    public static final String PACKAGE_NAME_RETRO_MODE = "info.retromode.libreelec";
+
     public static final OverviewItem UMN_RETRO_MODE = new OverviewItem(
             R.drawable.ic_umn_retro_umn_retro,
             R.drawable.ic_umn_retro_umn_retro_bg_bg,
@@ -83,7 +85,7 @@ public class DataSource {
             BODY_RETRO_MODE,
             new ApkData(
                     "https://n0render.com/N0Launcher/RetroMode.apk",
-                    "info.retromode.libreelec",
+                    PACKAGE_NAME_RETRO_MODE,
                     true
             )
     );

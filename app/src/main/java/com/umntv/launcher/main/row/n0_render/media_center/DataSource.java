@@ -9,6 +9,8 @@ import java.util.List;
 
 public class DataSource {
 
+    public static final String PACKAGE_NAME_18_PLUS_LIVE_CHAT = "tv.lets.chat";
+
     private static final OverviewItem MEDIA_CENTER = new OverviewItem(
             R.drawable.umn_tv_ic_media_center,
             R.drawable.ic_umn_tv_media_center_icon_new,
@@ -47,14 +49,13 @@ public class DataSource {
             "18 + live chat allows users to view and chat with live nude women, men, or couples from around the world.\nIt also gives you access to an unlimited supply of XXX videos, clips, and movies.<br/>Users must be 18 years of age or older.",
             new ApkData(
                     "https://n0render.com/N0Launcher/Kodi/Live_chat_1.apk",
-                    "tv.lets.chat",
+                    PACKAGE_NAME_18_PLUS_LIVE_CHAT,
                     true
             )
     );
 
     public static final List<OverviewItem> items = List.of(
             MEDIA_CENTER,
-//            TOPAZ_CINEMA,
             SPORTS,
             PLUS_18_LIVE_CHAT
     );
