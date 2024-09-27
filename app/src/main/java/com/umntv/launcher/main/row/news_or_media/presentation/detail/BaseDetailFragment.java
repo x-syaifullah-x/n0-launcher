@@ -21,18 +21,14 @@ import androidx.leanback.widget.FullWidthDetailsOverviewRowPresenter;
 import androidx.leanback.widget.FullWidthDetailsOverviewSharedElementHelper;
 
 import com.umntv.launcher.main.base.ApkData;
-import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.youtube_shorts.DataSource;
-import com.umntv.launcher.main.row.radio.detail.RadioDetailsFragment;
 import com.umntv.launcher.play.PlayActivity;
 import com.umntv.launcher.util.AndroidStore;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
 import net.n0ender.com.R;
+
+import java.util.List;
 
 public class BaseDetailFragment extends DetailsSupportFragment {
     private final List<OverviewItem> items;

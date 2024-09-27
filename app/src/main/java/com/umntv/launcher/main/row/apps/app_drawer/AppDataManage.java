@@ -30,7 +30,6 @@ public class AppDataManage {
             "mobi.omegacentauri.SpeakerBoost",
             "com.ndcsolution.androidtv.leankeykeyboard",
             "com.furnaghan.android.photoscreensaver",
-            com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DataSource.XXX_CHINESE_MEDIA_PACKAGE_NAME,
             DataSource.PACKAGE_NAME_N0_BROWSER,
             DataSource.PACKAGE_NAME_GAME_BROWSER,
             DataSource.PACKAGE_NAME_NO_RENDER

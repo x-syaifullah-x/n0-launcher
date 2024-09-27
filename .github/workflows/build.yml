@@ -2,7 +2,7 @@ name: build
 
 on:
   push:
-    branches: [ net.n0ender.com ]
+    branches: [ net.n0ender.com-lite ]
 #  pull_request:
 #    branches: [ started ]
 

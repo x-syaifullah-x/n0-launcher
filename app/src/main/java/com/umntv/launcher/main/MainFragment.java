@@ -37,36 +37,24 @@ import com.bumptech.glide.request.transition.Transition;
 import com.umntv.launcher.base.Card;
 import com.umntv.launcher.base.CardPresenter;
 import com.umntv.launcher.base.CardVisitor;
-import com.umntv.launcher.main.row.support.Ads;
-import com.umntv.launcher.main.row.support.AdsCard;
-import com.umntv.launcher.main.row.apps.Apps;
-import com.umntv.launcher.main.row.asian_media.AsianMedia;
-import com.umntv.launcher.main.row.asian_media.AsianMediaCard;
-import com.umntv.launcher.main.row.games.Games;
-import com.umntv.launcher.main.row.games.GamesCardApp;
-import com.umntv.launcher.main.row.kids.Kids;
-import com.umntv.launcher.main.row.kids.KidsCard;
-import com.umntv.launcher.main.row.tools.Tools;
-import com.umntv.launcher.main.row.tools.ToolsCard;
-import com.umntv.launcher.main.row.news_or_media.data.repository.NewsOrMediaRepository;
-import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
-import com.umntv.launcher.main.row.radio.Radio;
-import com.umntv.launcher.main.row.radio.RadioCard;
 import com.umntv.launcher.main.row.n0_render.UmnTv;
 import com.umntv.launcher.main.row.n0_render.UmnTvCard;
+import com.umntv.launcher.main.row.news_or_media.data.repository.NewsOrMediaRepository;
+import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
 import com.umntv.launcher.main.row.utilities.Utilities;
 import com.umntv.launcher.main.row.utilities.UtilitiesCard;
 import com.umntv.launcher.service.AccessService;
 import com.umntv.launcher.util.Admob;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
 
+import net.n0ender.com.R;
+
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import net.n0ender.com.R;
-
 public class MainFragment extends BrowseSupportFragment {
+
     private static final String TAG = "MainFragment";
 
     private static final int BACKGROUND_UPDATE_DELAY = 300;
@@ -128,66 +116,14 @@ public class MainFragment extends BrowseSupportFragment {
 
     private void loadRows() {
         if (rowsAdapter.size() == 0) {
-            addUmnTvRow();
+            addN0RenderRow();
             addNewsRow();
-            addKidsRow();
-            addGamesRow();
-            addRadioRow();
-            addAsianMediaRow();
-            addAppsRow();
             addUtilitiesRow();
-            addAdsRow();
-            addSupportRow();
             setAdapter(rowsAdapter);
         }
     }
 
-    private void addSupportRow() {
-        List<ToolsCard> list = Tools.setup(requireContext());
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(getString(R.string.auto_payment));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addAsianMediaRow() {
-        List<AsianMediaCard> list = AsianMedia.setup();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(getString(R.string.asian_series));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addRadioRow() {
-        List<RadioCard> list = Radio.setup();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(getString(R.string.radio));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addGamesRow() {
-        List<GamesCardApp> list = Games.setup();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(getString(R.string.games));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addKidsRow() {
-        List<KidsCard> list = Kids.setup();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(getString(R.string.kids));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addUmnTvRow() {
+    private void addN0RenderRow() {
         List<UmnTvCard> list = UmnTv.setupUmnTv();
         ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
         listRowAdapter.addAll(0, list);
@@ -210,25 +146,6 @@ public class MainFragment extends BrowseSupportFragment {
         listRowAdapter.addAll(0, list);
 
         HeaderItem header = new HeaderItem(getString(R.string.utility));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addAppsRow() {
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-
-        List<Card> list = Apps.setup();
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(2, getString(R.string.app));
-        rowsAdapter.add(new ListRow(header, listRowAdapter));
-    }
-
-    private void addAdsRow() {
-        List<AdsCard> list = Ads.setupAds();
-        ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
-        listRowAdapter.addAll(0, list);
-
-        HeaderItem header = new HeaderItem(1, getString(R.string.image));
         rowsAdapter.add(new ListRow(header, listRowAdapter));
     }
 
@@ -295,20 +212,6 @@ public class MainFragment extends BrowseSupportFragment {
                 ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://n0render.com/N0Launcher/tools/fx-file-explorer-9-0-1-2.apk");
             }
         });
-//        mInfo.setOnClickListener(view -> {
-////            String link = "https://www.youtube.com/playlist?list=PLhB5qMsDNiM9Rk_4Ah7KEIptB80Oisr90";
-////            Intent i = new Intent(Intent.ACTION_VIEW);
-////            i.setData(Uri.parse(link));
-////            startActivity(i);
-//            @SuppressWarnings("SpellCheckingInspection")
-//            String packageName = "com.netflix.Speedtest";
-//            Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
-//            if (launchIntent != null) {
-//                requireActivity().startActivity(launchIntent);
-//            } else {
-//                ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntvdealers.net/UMNTV/Apks/FAST%20Speed%20Test_.apk");
-//            }
-//        });
 
         mNetPlusTv.setOnClickListener(view -> promptNetPlusTv());
 
@@ -393,30 +296,6 @@ public class MainFragment extends BrowseSupportFragment {
         }
     }
 
-//    private class GridItemPresenter extends Presenter {
-//        @Override
-//        public ViewHolder onCreateViewHolder(ViewGroup parent) {
-//            TextView view = new TextView(parent.getContext());
-//            view.setLayoutParams(new ViewGroup.LayoutParams(GRID_ITEM_WIDTH, GRID_ITEM_HEIGHT));
-//            view.setFocusable(true);
-//            view.setFocusableInTouchMode(true);
-//            view.setBackgroundColor(
-//                    ContextCompat.getColor(requireActivity(), R.color.default_background));
-//            view.setTextColor(Color.WHITE);
-//            view.setGravity(Gravity.CENTER);
-//            return new ViewHolder(view);
-//        }
-//
-//        @Override
-//        public void onBindViewHolder(ViewHolder viewHolder, Object item) {
-//            ((TextView) viewHolder.view).setText((String) item);
-//        }
-//
-//        @Override
-//        public void onUnbindViewHolder(ViewHolder viewHolder) {
-//        }
-//    }
-
     private void promptNetPlusTv() {
         @SuppressWarnings("SpellCheckingInspection")
         String packageName = "com.teamviewer.quicksupport.market";
@@ -454,7 +333,6 @@ public class MainFragment extends BrowseSupportFragment {
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_RECEIVER_REGISTERED_ONLY);
                     requireContext().startActivity(intent);
                 } catch (Exception e) {
-                    e.printStackTrace();
                     Intent intent = new Intent(Settings.ACTION_SETTINGS);
                     requireContext().startActivity(intent);
                 }
@@ -495,18 +373,6 @@ public class MainFragment extends BrowseSupportFragment {
         } catch (Throwable t) {
             Toast.makeText(requireContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
         }
-
-//        String packageName = "com.charon.rocketfly";
-//        Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage(packageName);
-//        if (launchIntent == null) {
-//            launchIntent = requireActivity().getPackageManager().getLeanbackLaunchIntentForPackage(packageName);
-//        }
-//        if (launchIntent != null) {
-//            requireActivity().startActivity(launchIntent);
-//        } else {
-//            AndroidStore.open(requireContext(), packageName);
-////            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://umntvdealers.net/UMNTV/Apks/FX-8.0.3.0.apk");
-//        }
     }
 
     private boolean isAccessibilitySettingsOn(Context context) {
