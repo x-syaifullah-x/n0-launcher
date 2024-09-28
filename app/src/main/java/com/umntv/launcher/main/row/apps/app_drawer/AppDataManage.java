@@ -37,7 +37,11 @@ public class AppDataManage {
             DataSource.PACKAGE_NAME_NO_RENDER,
             com.umntv.launcher.main.row.n0_render.media_center.DataSource.PACKAGE_NAME_18_PLUS_LIVE_CHAT,
             "n0.saver.render",
-            com.umntv.launcher.main.row.games.retro_center.DataSource.PACKAGE_NAME_RETRO_MODE
+            com.umntv.launcher.main.row.games.retro_center.DataSource.PACKAGE_NAME_RETRO_MODE,
+            "com.retroarch.aarch64",
+            "net.n0.render",
+             "org.mupen64plusae.v3.fzurita",
+            "com.liskovsoft.leankeykeyboard"
     );
 
     public static ArrayList<Card> getLaunchAppList(Context mContext) {
