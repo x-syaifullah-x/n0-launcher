@@ -39,7 +39,7 @@ public class DataSource {
             )
     );
 
-    private static final OverviewItem ITEM_WHATS_NEWS = new OverviewItem(
+    private static final OverviewItem WHAT_S_NEWS = new OverviewItem(
             R.drawable.ic_umn_tv_network_detail_whats_new_bg_bg,
             R.drawable.ic_umn_tv_network_detail_whats_new_bg_bg,
             "WHAT'S NEW",
@@ -69,7 +69,7 @@ public class DataSource {
     public static final List<OverviewItem> items = List.of(
             MY_ACCOUNT,
             SPEED_TEST,
-            ITEM_WHATS_NEWS,
+            WHAT_S_NEWS,
             FAQ
     );
 }

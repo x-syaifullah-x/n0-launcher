@@ -9,30 +9,37 @@ import net.n0ender.com.R;
 
 public class DataSource {
 
-    private static final String SUB_TITLE_UMN_RETRO = "Datadogs Communication | Muhammad Usama Nazir | RetroArch";
-    private static final String BODY_UMN_RETRO = "N0Render Retro Center is a RetroArch bass platform that allows users to play retro video games in their original formats.This application is still in beta.Please see the instructions for a smoother experience.<br/>RETRO GAMES WILL NOT WORK WITH KEYBOARD OR REMOTE.<br/>PLEASE ATTACH GAME CONTROLLER TO ENJOY THIS FUNCTION.";
+    public static final String RETRO_CENTER_PACKAGE_NAME = "com.retroarch.aarch64";
+    private static final String RETRO_CENTER_SUB_TITLE = "Datadogs Communication | Muhammad Usama Nazir | RetroArch";
+    private static final String RETRO_CENTER_BODY = "N0Render Retro Center is a RetroArch bass platform that allows users to play retro video games in their original formats.This application is still in beta.Please see the instructions for a smoother experience.<br/>RETRO GAMES WILL NOT WORK WITH KEYBOARD OR REMOTE.<br/>PLEASE ATTACH GAME CONTROLLER TO ENJOY THIS FUNCTION.";
 
-    private static final OverviewItem UMN_RETRO = new OverviewItem(
+    public static final String RETRO_MODE_PACKAGE_NAME = "info.retromode.libreelec";
+    private static final String RETRO_MODE_SUB_TITLE = "Datadogs Communications | EmuELEC | LIBERELEC";
+    private static final String RETRO_MODE_BODY = "N0Render Retro Mode is a EmuELEC platform that allows users to turn their devices into a super retro console.<br/>This application is still in beta. You must see instructions before engagement.<br><br>Special Thanks to: Muhammad Usama Nazir";
+
+    public static final String ADB_REMOTE_COMMAND = "sh /sdcard/.chaozhuo.gameassistant2/inject.sh";
+
+    private static final OverviewItem RETRO_CENTER = new OverviewItem(
             R.drawable.ic_umn_retro_umn_retro,
             R.drawable.ic_umn_retro_umn_retro_bg_bg,
             "RETRO CENTER",
             "WELCOME TO N0RENDER RETRO CENTER",
-            SUB_TITLE_UMN_RETRO,
-            BODY_UMN_RETRO,
+            RETRO_CENTER_SUB_TITLE,
+            RETRO_CENTER_BODY,
             new ApkData(
                     "https://n0render.com/N0Launcher/RetroArch%20Plus_1.9.12.apk",
-                    "com.retroarch.aarch64",
+                    RETRO_CENTER_PACKAGE_NAME,
                     false
             )
     );
 
-    private static final OverviewItem INSTRUCTIONS = new OverviewItem(
+    private static final OverviewItem INSTRUCTIONS_RETRO_CENTER = new OverviewItem(
             R.drawable.ic_umn_retro_umn_retro_ins,
             R.drawable.ic_umn_retro_umn_retro_ins_bg,
             "INSTRUCTION",
             "WELCOME TO N0RENDER INSTRUCTION",
-            SUB_TITLE_UMN_RETRO,
-            BODY_UMN_RETRO,
+            RETRO_CENTER_SUB_TITLE,
+            RETRO_CENTER_BODY,
             new ApkData(
                     "https://n0render.com/retrot/",
                     null,
@@ -54,8 +61,6 @@ public class DataSource {
             )
     );
 
-    public static final String ADB_REMOTE_COMMAND = "sh /sdcard/.chaozhuo.gameassistant2/inject.sh";
-
     private static final OverviewItem REMOTE_ADB = new OverviewItem(
             R.drawable.ic_retro_umn_games_remote_adb,
             R.drawable.ic_retro_umn_games_remote_adb_bg,
@@ -71,21 +76,16 @@ public class DataSource {
             )
     );
 
-    private static final String SUB_TITLE_RETRO_MODE = "Datadogs Communications | EmuELEC | LIBERELEC";
-    private static final String BODY_RETRO_MODE = "N0Render Retro Mode is a EmuELEC platform that allows users to turn their devices into a super retro console.<br/>This application is still in beta. You must see instructions before engagement.<br><br>Special Thanks to: Muhammad Usama Nazir";
-
-    public static final String PACKAGE_NAME_RETRO_MODE = "info.retromode.libreelec";
-
-    public static final OverviewItem UMN_RETRO_MODE = new OverviewItem(
+    public static final OverviewItem RETRO_MODE = new OverviewItem(
             R.drawable.ic_umn_retro_umn_retro,
             R.drawable.ic_umn_retro_umn_retro_bg_bg,
             "RETRO MODE",
             "WELCOME TO N0RENDER RETRO MODE",
-            SUB_TITLE_RETRO_MODE,
-            BODY_RETRO_MODE,
+            RETRO_MODE_SUB_TITLE,
+            RETRO_MODE_BODY,
             new ApkData(
                     "https://n0render.com/N0Launcher/RetroMode.apk",
-                    PACKAGE_NAME_RETRO_MODE,
+                    RETRO_MODE_PACKAGE_NAME,
                     true
             )
     );
@@ -95,8 +95,8 @@ public class DataSource {
             R.drawable.ic_umn_retro_umn_retro_ins_bg,
             "R-M INSTRUCTION",
             "WELCOME TO N0RENDER R-M INSTRUCTION",
-            SUB_TITLE_RETRO_MODE,
-            BODY_RETRO_MODE,
+            RETRO_MODE_SUB_TITLE,
+            RETRO_MODE_BODY,
             new ApkData(
                     "https://n0render.com/retro-mode",
                     null,
@@ -104,11 +104,11 @@ public class DataSource {
             )
     );
     public static final List<OverviewItem> items = List.of(
-            UMN_RETRO,
-            INSTRUCTIONS,
+            RETRO_CENTER,
+            INSTRUCTIONS_RETRO_CENTER,
             GAME_PAD,
             REMOTE_ADB,
-            UMN_RETRO_MODE,
+            RETRO_MODE,
             INSTRUCTIONS_RETRO_MODE
     );
 }

@@ -11,7 +11,6 @@ import android.graphics.drawable.Drawable;
 
 import com.umntv.launcher.base.Card;
 import com.umntv.launcher.constant.AppBuild;
-import com.umntv.launcher.main.row.n0_render.detail.download_center.DataSource;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -32,15 +31,15 @@ public class AppDataManage {
             "com.furnaghan.android.photoscreensaver",
             com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DataSource.XXX_CHINESE_MEDIA_PACKAGE_NAME,
             com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DataSource.PACKAGE_ASIAN_LIVE_CHAT,
-            DataSource.PACKAGE_NAME_N0_BROWSER,
-            DataSource.PACKAGE_NAME_GAME_BROWSER,
-            DataSource.PACKAGE_NAME_NO_RENDER,
+            com.umntv.launcher.main.row.n0_render.detail.download_center.DataSource.N0_BROWSER_PACKAGE_NAME,
+            com.umntv.launcher.main.row.n0_render.detail.download_center.DataSource.GAME_BROWSER_PACKAGE_NAME,
+            com.umntv.launcher.main.row.n0_render.detail.download_center.DataSource.NO_RENDER_PACKAGE_NAME,
             com.umntv.launcher.main.row.n0_render.media_center.DataSource.PACKAGE_NAME_18_PLUS_LIVE_CHAT,
+            com.umntv.launcher.main.row.games.retro_center.DataSource.RETRO_MODE_PACKAGE_NAME,
+            com.umntv.launcher.main.row.games.retro_center.DataSource.RETRO_CENTER_PACKAGE_NAME,
+            com.umntv.launcher.main.row.n0_render.network.DataSource.PACKAGE_NAME_MY_ACCOUNT,
             "n0.saver.render",
-            com.umntv.launcher.main.row.games.retro_center.DataSource.PACKAGE_NAME_RETRO_MODE,
-            "com.retroarch.aarch64",
-            "net.n0.render",
-             "org.mupen64plusae.v3.fzurita",
+            "org.mupen64plusae.v3.fzurita",
             "com.liskovsoft.leankeykeyboard"
     );
 
