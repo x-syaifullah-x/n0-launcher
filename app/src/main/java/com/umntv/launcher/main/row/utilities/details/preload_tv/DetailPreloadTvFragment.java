@@ -41,7 +41,6 @@ public class DetailPreloadTvFragment extends BaseDetailFragment {
                     .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
                     .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
                     .show();
-            return;
         }
     }
 
