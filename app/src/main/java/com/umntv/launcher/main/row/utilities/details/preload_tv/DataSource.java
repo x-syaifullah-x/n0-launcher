@@ -14,7 +14,7 @@ public class DataSource {
     private static final String URL_MAC = "https://n0render.com/N0Launcher/Preloads/mac.tmb";
     private static final String URL_CUSTOMER_1 = "https://n0render.com/N0Launcher/Preloads/cus1.tmb";
     private static final String URL_CUSTOMER_2 = "https://n0render.com/N0Launcher/Preloads/cus2.tmb";
-    public static final String URL_SELF_LOAD = "https://n0render.com/Selfload";
+    public static final String URL_SELF_LOAD = "https://n0render.com/N0Launcher/Selfload";
     public static final String URL_CODE_REQUEST = "n0browser://n0render.com/self-loaded-preload";
 
     private static final OverviewItem WELCOME = new OverviewItem(
