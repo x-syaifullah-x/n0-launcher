@@ -87,7 +87,7 @@ public class DataSource {
             )
     );
 
-    private static final OverviewItem SELF_LOAD = new OverviewItem(
+    public static final OverviewItem SELF_LOAD = new OverviewItem(
             R.drawable.ic_utilities_preload_tv_new,
             R.drawable.ic_utilities_preload_tv_new,
             "SELF LOAD",
