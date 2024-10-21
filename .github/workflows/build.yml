@@ -7,16 +7,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      JAVA_HOME: ${{ github.workspace }}/JBR
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup JDK 17
+      - name: Setup JDK
         uses: actions/setup-java@v4
         with:
-          java-version: "17"
+          java-version: "21"
           distribution: "oracle"
+          cache: gradle
 
       - name: Setup gradle properties
         run: |
@@ -27,21 +26,21 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Run gradlew build
-        run: ./gradlew clean build
-      - name: Upload directory outputs
-        uses: actions/upload-artifact@v4
-        with:
-          name: outputs
-          path: app/build/outputs
+#      - name: Run gradlew build
+#        run: ./gradlew clean build
+#      - name: Upload directory outputs
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: outputs
+#          path: app/build/outputs
 
-      - name: Run gradlew assemble debug
-        run: ./gradlew clean assembleDebug
-      - name: Upload apk debug
-        uses: actions/upload-artifact@v4
-        with:
-          name: apk-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+#      - name: Run gradlew assemble debug
+#        run: ./gradlew clean assembleDebug
+#      - name: Upload apk debug
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: apk-debug
+#          path: app/build/outputs/apk/debug/app-debug.apk
 
       - name: Run gradlew assemble release
         run: ./gradlew clean assembleRelease
@@ -51,10 +50,10 @@ jobs:
           name: apk-release
           path: app/build/outputs/apk/release/app-release.apk
 
-      - name: Run gradlew bundle release
-        run: ./gradlew clean bundleRelease
-      - name: Upload aab release
-        uses: actions/upload-artifact@v4
-        with:
-          name: aab-release
-          path: app/build/outputs/bundle/release/app-release.aab
+#      - name: Run gradlew bundle release
+#        run: ./gradlew clean bundleRelease
+#      - name: Upload aab release
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: aab-release
+#          path: app/build/outputs/bundle/release/app-release.aab

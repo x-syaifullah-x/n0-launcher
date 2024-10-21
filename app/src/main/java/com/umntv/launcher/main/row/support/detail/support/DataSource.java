@@ -52,7 +52,6 @@ public class DataSource {
     );
 
     public static final List<OverviewItem> items = List.of(
-            TECH_SUPPORT,
             DINERO_DATA,
             ORAMAL_ENTERPRISES
     );

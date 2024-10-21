@@ -19,7 +19,7 @@ public class Tools {
         if (!list.isEmpty()) return list;
 
         String[] title = {
-                "AI SMART",
+                "AI SMART ASSIST",
                 "TEVEGRAM",
                 "TVMAIL",
                 "Zoog VPN".toUpperCase(),
