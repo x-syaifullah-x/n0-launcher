@@ -14,12 +14,11 @@ public class AsianMedia {
     public static List<AsianMediaCard> setup() {
         if (asianMediaCards.isEmpty()) {
             String[] title = {
-//                    "UMN ASIAN MEDIA",
                     "JADE CINEMA",
                     "VIKI",
                     "ASIANCRUSH",
                     "CRUNCHYROLL",
-                    "FUNIMATION",
+//                    "FUNIMATION",
                     "IQIYI",
                     "WU TANG"
             };
@@ -28,7 +27,7 @@ public class AsianMedia {
                     R.drawable.ic_asian_media_viki,
                     R.drawable.ic_asian_media_asianchash,
                     R.drawable.ic_asian_media_crunchyroll,
-                    R.drawable.ic_asian_media_funimation,
+//                    R.drawable.ic_asian_media_funimation,
                     R.drawable.ic_asian_media_iqiyi,
                     R.drawable.ic_asian_media_tencent,
             };
@@ -37,7 +36,7 @@ public class AsianMedia {
                     "com.viki.android",
                     "com.dmr.asiancrush.tv",
                     "com.crunchyroll.crunchyroid",
-                    "com.Funimation.FunimationNow.androidtv",
+//                    "com.Funimation.FunimationNow.androidtv",
                     "com.iqiyi.i18n.tv",
                     "com.goldenmedia.wutang.tv",
             };
@@ -47,8 +46,7 @@ public class AsianMedia {
                     "https://umntvdealers.net/UMNTV/Apks/VIKI.apk",
                     null,
                     null,
-//                    "https://umntvdealers.net/UMNTV/Apks/Funimation_.com.apk",
-                    null,
+//                    null,
                     null,
                     null
             };

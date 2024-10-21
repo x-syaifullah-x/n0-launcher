@@ -171,7 +171,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     actionAdapter.add(new Action(i, TRAP_BEATS_PLAY_LIST[i].titleTab));
                 }
             }
-            case Radio.RADIONLINE -> {
+            case Radio.TUNE_IN -> {
                 for (int i = 0; i < HMONG_PLAY_LIST.length; i++) {
                     actionAdapter.add(new Action(i, HMONG_PLAY_LIST[i].titleTab));
                 }
@@ -181,7 +181,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     actionAdapter.add(new Action(i, UMN_PLAY_LIST[i].titleTab));
                 }
             }
-            case Radio.STUDY_MUSIC -> {
+            case Radio.SPOTIFY -> {
                 for (int i = 0; i < STUDY_MUSIC_PLAY_LIST.length; i++) {
                     actionAdapter.add(new Action(i, STUDY_MUSIC_PLAY_LIST[i].titleTab));
                 }
@@ -227,7 +227,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                             detailsOverviewRow.setItem(radioCard);
                             detailsOverviewRow.setImageDrawable(ContextCompat.getDrawable(requireContext(), umnPlayList.icon));
                         }
-                        case Radio.RADIONLINE -> {
+                        case Radio.TUNE_IN -> {
                             UmnPlayList umnPlayList = HMONG_PLAY_LIST[index];
                             String title = umnPlayList.title;
                             RadioCard radioCard = new RadioCard();
@@ -239,7 +239,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                             detailsOverviewRow.setItem(radioCard);
                             detailsOverviewRow.setImageDrawable(ContextCompat.getDrawable(requireContext(), umnPlayList.icon));
                         }
-                        case Radio.STUDY_MUSIC -> {
+                        case Radio.SPOTIFY -> {
                             UmnPlayList umnPlayList = STUDY_MUSIC_PLAY_LIST[index];
                             String title = umnPlayList.title;
                             RadioCard radioCard = new RadioCard();
@@ -300,7 +300,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     }
                     break;
                 }
-                case Radio.RADIONLINE: {
+                case Radio.TUNE_IN: {
                     UmnPlayList umnPlayList = HMONG_PLAY_LIST[index];
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     try {
@@ -330,7 +330,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     }
                     break;
                 }
-                case Radio.STUDY_MUSIC: {
+                case Radio.SPOTIFY: {
                     UmnPlayList umnPlayList = STUDY_MUSIC_PLAY_LIST[index];
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     try {

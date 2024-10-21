@@ -6,10 +6,10 @@ import androidx.core.content.ContextCompat;
 
 import com.umntv.launcher.util.ResourceHelpers;
 
+import net.n0ender.com.R;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import net.n0ender.com.R;
 
 public class Tools {
 
@@ -19,9 +19,9 @@ public class Tools {
         if (!list.isEmpty()) return list;
 
         String[] title = {
-                "AI SMART ASSIST",
-                "TELEGRAM",
-                "TV E-mail".toUpperCase(),
+                "AI SMART",
+                "TEVEGRAM",
+                "TVMAIL",
                 "Zoog VPN".toUpperCase(),
                 "SEND FILES TO TV",
                 "Screencast".toUpperCase(),
@@ -45,8 +45,9 @@ public class Tools {
 
         String[] apkUrl = {
                 null,
-                "https://n0render.com/N0Launcher/telegram_2.5.9-176.apk",
-                "https://n0render.com/N0Launcher/TVmail.apk",
+                null,
+                null,
+//                "https://n0render.com/N0Launcher/TVmail.apk",
                 null,
                 null,
                 null,
