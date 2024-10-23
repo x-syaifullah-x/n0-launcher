@@ -37,13 +37,6 @@ public class DetailPreloadTvFragment extends BaseDetailFragment {
     @Override
     protected void onActionClickListener(OverviewItem overviewItem) {
         if (overviewItem.apkData.isPrivate) {
-            if (overviewItem == DataSource.SELF_LOAD) {
-                new DialogPassword(requireContext(), "N02025")
-                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
-                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
-                        .show();
-                return;
-            }
             new DialogPassword(requireContext(), "_+N0")
                     .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
                     .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
