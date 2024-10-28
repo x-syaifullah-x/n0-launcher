@@ -40,7 +40,8 @@ public class AppDataManage {
             com.umntv.launcher.main.row.n0_render.network.DataSource.PACKAGE_NAME_MY_ACCOUNT,
             "n0.saver.render",
             "org.mupen64plusae.v3.fzurita",
-            "com.liskovsoft.leankeykeyboard"
+            "com.liskovsoft.leankeykeyboard",
+            "flar2.homebutton"
     );
 
     public static ArrayList<Card> getLaunchAppList(Context mContext) {

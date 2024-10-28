@@ -79,25 +79,25 @@ public class DataSource {
             )
     );
 
-    private static final OverviewItem BUTTON_MAP = new OverviewItem(
-            R.drawable.ic_utilities_remote_support,
-            R.drawable.ic_utilities_remote_support,
-            "BUTTON MAP",
-            "REMOTE SUPPORT",
-            "",
-            "",
-            new ApkData(
-                    "https://umntvdealers.net/UMNTV/Apks/Button-Mapper-Pro).apk",
-                    "flar2.homebutton",
-                    false
-            )
-    );
+//    private static final OverviewItem BUTTON_MAP = new OverviewItem(
+//            R.drawable.ic_utilities_remote_support,
+//            R.drawable.ic_utilities_remote_support,
+//            "BUTTON MAP",
+//            "REMOTE SUPPORT",
+//            "",
+//            "",
+//            new ApkData(
+//                    "https://umntvdealers.net/UMNTV/Apks/Button-Mapper-Pro).apk",
+//                    "flar2.homebutton",
+//                    false
+//            )
+//    );
     public static final List<OverviewItem> items = List.of(
             ANY_DESK,
             TEAMVIEWER,
             TV_ADDON,
             ZIP_UPLOAD,
-            APK_UPLOAD,
-            BUTTON_MAP
+            APK_UPLOAD
+//            BUTTON_MAP
     );
 }
