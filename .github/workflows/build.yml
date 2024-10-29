@@ -64,4 +64,6 @@ jobs:
 
       - name: upload linux artifact
         run: 
-         gh release create ${{ github.ref_name }} "app/build/outputs/apk/release/app-release.apk" --generate-notes --title "Version ${{ github.ref_name }}"
+         app_version=$(aapt dump badging test.apk | grep "versionName" | sed -e "s/.*versionName='//" -e "s/' .*//")
+         echo $app_version
+         #gh release create ${{ github.ref_name }} "app/build/outputs/apk/release/app-release.apk" --generate-notes --title "Version ${{ github.ref_name }}"
