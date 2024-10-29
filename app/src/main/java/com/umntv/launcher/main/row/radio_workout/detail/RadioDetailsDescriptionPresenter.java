@@ -1,8 +1,8 @@
-package com.umntv.launcher.main.row.radio.detail;
+package com.umntv.launcher.main.row.radio_workout.detail;
 
 import androidx.leanback.widget.AbstractDetailsDescriptionPresenter;
 
-import com.umntv.launcher.main.row.radio.RadioCard;
+import com.umntv.launcher.main.row.radio_workout.RadioCard;
 
 public class RadioDetailsDescriptionPresenter extends AbstractDetailsDescriptionPresenter {
 

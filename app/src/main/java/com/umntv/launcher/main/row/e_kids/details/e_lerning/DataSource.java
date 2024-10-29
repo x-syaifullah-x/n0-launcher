@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.kids.details.e_lerning;
+package com.umntv.launcher.main.row.e_kids.details.e_lerning;
 
 import com.umntv.launcher.main.base.ApkData;
 import com.umntv.launcher.main.base.OverviewItem;

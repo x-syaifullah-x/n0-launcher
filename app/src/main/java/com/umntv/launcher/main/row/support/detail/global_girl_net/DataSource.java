@@ -15,7 +15,7 @@ public class DataSource {
             "PLAY",
             "GLOBAL GIRLS NET",
             "",
-            "Grow your business by placing your ads on our platform for as little as $5 a month.<br/>Users will have a direct link to your information or content.<br/>Contact us support@umntv.com",
+            "Grow your business by placing your ads on our platform for as little as $5 a month.<br/>Users will have a direct link to your information or content.<br/>Contact us support@n0render.com",
             new ApkData(
                     "https://www.youtube.com/playlist?list=PLhB5qMsDNiM-rlANEez6jigbfST_nZRmL",
                     "jade.umn.net",

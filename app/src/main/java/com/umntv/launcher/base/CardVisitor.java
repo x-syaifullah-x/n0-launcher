@@ -17,15 +17,15 @@ import com.umntv.launcher.main.row.apps.app_drawer.LaunchApp;
 import com.umntv.launcher.main.row.asian_media.AsianMediaCard;
 import com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DetailFragment;
 import com.umntv.launcher.main.row.games.GamesCardApp;
-import com.umntv.launcher.main.row.kids.KidsCard;
+import com.umntv.launcher.main.row.e_kids.KidsCard;
 import com.umntv.launcher.main.row.tools.ToolsCard;
 import com.umntv.launcher.main.row.news_or_media.data.repository.NewsOrMediaRepository;
 import com.umntv.launcher.main.row.news_or_media.domain.model.NewsMediaModel;
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.IntNewsFragment;
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.NewsDetailsActivity;
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.youtube_shorts.YoutubeShortsFragment;
-import com.umntv.launcher.main.row.radio.RadioCard;
-import com.umntv.launcher.main.row.radio.detail.RadioDetailsActivity;
+import com.umntv.launcher.main.row.radio_workout.RadioCard;
+import com.umntv.launcher.main.row.radio_workout.detail.RadioDetailsActivity;
 import com.umntv.launcher.main.row.n0_render.UmnTv;
 import com.umntv.launcher.main.row.n0_render.UmnTvCard;
 import com.umntv.launcher.main.row.n0_render.detail.download_center.DownloadCenterDetailFragment;
@@ -171,7 +171,7 @@ public class CardVisitor extends CardVisitorKt {
             }
         } else {
             Intent intent = new Intent(getContext(), DetailsActivity.class);
-            intent.setAction(com.umntv.launcher.main.row.kids.details.e_lerning.DetailFragment.class.getName());
+            intent.setAction(com.umntv.launcher.main.row.e_kids.details.e_lerning.DetailFragment.class.getName());
             getContext().startActivity(intent);
         }
     }

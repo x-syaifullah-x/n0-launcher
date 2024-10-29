@@ -1,9 +1,7 @@
-package com.umntv.launcher.main.row.kids;
+package com.umntv.launcher.main.row.e_kids;
 
 import com.umntv.launcher.base.Card;
 import com.umntv.launcher.base.CardVisitor;
-
-import java.io.Serializable;
 
 public class KidsCard extends Card {
 

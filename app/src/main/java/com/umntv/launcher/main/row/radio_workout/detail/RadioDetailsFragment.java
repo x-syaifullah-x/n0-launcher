@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.radio.detail;
+package com.umntv.launcher.main.row.radio_workout.detail;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -33,8 +33,8 @@ import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.umntv.launcher.base.CardVisitor;
 import com.umntv.launcher.main.MainActivity;
-import com.umntv.launcher.main.row.radio.Radio;
-import com.umntv.launcher.main.row.radio.RadioCard;
+import com.umntv.launcher.main.row.radio_workout.Radio;
+import com.umntv.launcher.main.row.radio_workout.RadioCard;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.radio.detail;
+package com.umntv.launcher.main.row.radio_workout.detail;
 
 import com.umntv.launcher.base.CardPresenter;
 import com.umntv.launcher.base.CardView;

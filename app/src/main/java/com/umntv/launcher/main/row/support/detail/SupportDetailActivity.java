@@ -20,7 +20,6 @@ import java.io.Serializable;
 public class SupportDetailActivity extends FragmentActivity {
 
     public static final String ITEM = "Item";
-    public static final String SHARED_ELEMENT_NAME = "hero";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

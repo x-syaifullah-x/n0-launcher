@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.kids;
+package com.umntv.launcher.main.row.e_kids;
 
 import net.n0ender.com.R;
 

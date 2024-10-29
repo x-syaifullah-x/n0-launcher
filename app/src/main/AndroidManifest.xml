@@ -88,7 +88,7 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name="com.umntv.launcher.main.row.radio.detail.RadioDetailsActivity"
+            android:name="com.umntv.launcher.main.row.radio_workout.detail.RadioDetailsActivity"
             android:screenOrientation="landscape" />
 
         <activity

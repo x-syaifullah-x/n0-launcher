@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.radio;
+package com.umntv.launcher.main.row.radio_workout;
 
 import com.umntv.launcher.util.ResourceHelpers;
 
