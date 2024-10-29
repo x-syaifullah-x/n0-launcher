@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentActivity;
 import com.umntv.launcher.main.row.support.Ads;
 import com.umntv.launcher.main.row.support.AdsCard;
 import com.umntv.launcher.main.row.support.detail.global_girl_net.GlobalGirlNetFragment;
+import com.umntv.launcher.main.row.support.detail.platinum_staffing.PlatinumStaffingFragment;
 import com.umntv.launcher.main.row.support.detail.support.SupportFragment;
 
 import net.n0ender.com.R;
@@ -35,6 +36,10 @@ public class AdsDetailsActivity extends FragmentActivity {
                 } else if (a.getTitle().equals(Ads.GLOBAL_GIRLS_NET)) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.main_browse_fragment, new GlobalGirlNetFragment())
+                            .commitNow();
+                } else if (a.getTitle().equals(Ads.PLATINUM_STAFFING)) {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.main_browse_fragment, new PlatinumStaffingFragment())
                             .commitNow();
                 } else {
                     getSupportFragmentManager().beginTransaction()
