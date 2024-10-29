@@ -57,3 +57,14 @@ jobs:
 #        with:
 #          name: aab-release
 #          path: app/build/outputs/bundle/release/app-release.aab
+
+
+      - name: upload linux artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: app/build/outputs/apk/release/app-release.apk
+          asset_name: app-release.apk
+          asset_content_type: application/gzip
