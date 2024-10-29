@@ -37,8 +37,8 @@ import com.bumptech.glide.request.transition.Transition;
 import com.umntv.launcher.base.Card;
 import com.umntv.launcher.base.CardPresenter;
 import com.umntv.launcher.base.CardVisitor;
-import com.umntv.launcher.main.row.support.Ads;
-import com.umntv.launcher.main.row.support.AdsCard;
+import com.umntv.launcher.main.row.support.Support;
+import com.umntv.launcher.main.row.support.SupportCard;
 import com.umntv.launcher.main.row.apps.Apps;
 import com.umntv.launcher.main.row.asian_media.AsianMedia;
 import com.umntv.launcher.main.row.asian_media.AsianMediaCard;
@@ -224,7 +224,7 @@ public class MainFragment extends BrowseSupportFragment {
     }
 
     private void addAdsRow() {
-        List<AdsCard> list = Ads.setupAds();
+        List<SupportCard> list = Support.setupAds();
         ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());
         listRowAdapter.addAll(0, list);
 

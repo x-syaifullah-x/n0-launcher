@@ -5,8 +5,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
-import com.umntv.launcher.main.row.support.Ads;
-import com.umntv.launcher.main.row.support.AdsCard;
+import com.umntv.launcher.main.row.support.Support;
+import com.umntv.launcher.main.row.support.SupportCard;
 import com.umntv.launcher.main.row.support.detail.global_girl_net.GlobalGirlNetFragment;
 import com.umntv.launcher.main.row.support.detail.leeway.LeewayFragment;
 import com.umntv.launcher.main.row.support.detail.platinum_staffing.PlatinumStaffingFragment;
@@ -17,7 +17,7 @@ import net.n0ender.com.R;
 
 import java.io.Serializable;
 
-public class AdsDetailsActivity extends FragmentActivity {
+public class SupportDetailActivity extends FragmentActivity {
 
     public static final String ITEM = "Item";
     public static final String SHARED_ELEMENT_NAME = "hero";
@@ -29,25 +29,25 @@ public class AdsDetailsActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null) {
-            Serializable s = getIntent().getSerializableExtra(AdsDetailsActivity.ITEM);
-            if (s instanceof AdsCard a) {
-                if (a.getTitle().equals(Ads.VENDORS_SUPPORT)) {
+            Serializable s = getIntent().getSerializableExtra(SupportDetailActivity.ITEM);
+            if (s instanceof SupportCard a) {
+                if (a.getTitle().equals(Support.VENDORS_SUPPORT)) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.main_browse_fragment, new SupportFragment())
                             .commitNow();
-                } else if (a.getTitle().equals(Ads.GLOBAL_GIRLS_NET)) {
+                } else if (a.getTitle().equals(Support.GLOBAL_GIRLS_NET)) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.main_browse_fragment, new GlobalGirlNetFragment())
                             .commitNow();
-                } else if (a.getTitle().equals(Ads.PLATINUM_STAFFING)) {
+                } else if (a.getTitle().equals(Support.PLATINUM_STAFFING)) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.main_browse_fragment, new PlatinumStaffingFragment())
                             .commitNow();
-                } else if (a.getTitle().equals(Ads.THE_DALE_STUDIOS)) {
+                } else if (a.getTitle().equals(Support.THE_DALE_STUDIOS)) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.main_browse_fragment, new TheDaleStudiosFragment())
                             .commitNow();
-                } else if (a.getTitle().equals(Ads.TITLE_LEEWAY_ENDEAVORS)) {
+                } else if (a.getTitle().equals(Support.TITLE_LEEWAY_ENDEAVORS)) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.main_browse_fragment, new LeewayFragment())
                             .commitNow();

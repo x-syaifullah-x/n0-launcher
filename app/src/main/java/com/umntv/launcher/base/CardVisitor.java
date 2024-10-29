@@ -7,8 +7,8 @@ import android.net.Uri;
 import android.widget.Toast;
 
 import com.umntv.launcher.main.DetailsActivity;
-import com.umntv.launcher.main.row.support.AdsCard;
-import com.umntv.launcher.main.row.support.detail.AdsDetailsActivity;
+import com.umntv.launcher.main.row.support.SupportCard;
+import com.umntv.launcher.main.row.support.detail.SupportDetailActivity;
 import com.umntv.launcher.main.row.apps.AppsActivity;
 import com.umntv.launcher.main.row.apps.AppsCard;
 import com.umntv.launcher.main.row.apps.app_drawer.AppDrawerCard;
@@ -72,9 +72,9 @@ public class CardVisitor extends CardVisitorKt {
         getContext().startActivity(intent);
     }
 
-    public void click(AdsCard adsCard) {
-        Intent intent = new Intent(getContext(), AdsDetailsActivity.class);
-        intent.putExtra(AdsDetailsActivity.ITEM, adsCard);
+    public void click(SupportCard supportCard) {
+        Intent intent = new Intent(getContext(), SupportDetailActivity.class);
+        intent.putExtra(SupportDetailActivity.ITEM, supportCard);
         getContext().startActivity(intent);
     }
 

@@ -13,7 +13,7 @@ public class DataSource {
             R.drawable.ic_ads_dale_studios,
             "PLAY",
             "THE DALE STUDIOS",
-            "",
+            "About The DALE...",
             "The DALE fully meets the needs of creating professional images for individual and businesses:<br/>\t\t1.Book models to take pictures, record video reviews, promotional videos or attend events<br/>\t\t2.Multi-style photography and filming studio for rent<br/>\t\t3.Artistic photography, fashion photography, product photos,.<br/>thedalestudios.com | Phone: 0941051990",
             new ApkData(
                     "https://www.youtube.com/playlist?list=PLhB5qMsDNiM_hPegyJe2YPu91YqaSsJAI",
@@ -27,7 +27,7 @@ public class DataSource {
             R.drawable.ic_ads_dale_studios,
             "OPEN SITE",
             "THE DALE STUDIOS",
-            "",
+            "About The DALE...",
             "The DALE fully meets the needs of creating professional images for individual and businesses:<br/>\t\t1.Book models to take pictures, record video reviews, promotional videos or attend events<br/>\t\t2.Multi-style photography and filming studio for rent<br/>\t\t3.Artistic photography, fashion photography, product photos,.<br/>thedalestudios.com | Phone: 0941051990",
             new ApkData(
                     "https://thedalestudios.com",

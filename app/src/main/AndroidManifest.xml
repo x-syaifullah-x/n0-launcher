@@ -80,7 +80,7 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name="com.umntv.launcher.main.row.support.detail.AdsDetailsActivity"
+            android:name="com.umntv.launcher.main.row.support.detail.SupportDetailActivity"
             android:screenOrientation="landscape" />
 
         <activity
