@@ -15,7 +15,7 @@ public class DataSource {
             "PLAY",
             "PLATINUM STAFFING",
             "",
-            "Platinum Staffing, Inc. is a full service, staffing agency that has trained and certified recruiters\nthat are specialists in their respective fields. We staff manufacturing machining. IT, medical,\nexecutive level, engineering, administration and more.\n\nPhone: 1(763) 560-8430 中国人 EXT. 300'",
+            "Platinum Staffing, Inc. is a full service, staffing agency that has trained and certified recruiters<br/>that are specialists in their respective fields. We staff manufacturing machining. IT, medical,<br/>executive level, engineering, administration and more.<br/><br/>Phone: 1(763) 560-8430 中国人 EXT. 300'",
             new ApkData(
                     "https://www.youtube.com/playlist?list=PLhB5qMsDNiM9eNGxVVK0KOdQhIWDQG_ft",
                     "jade.umn.net",
@@ -29,7 +29,7 @@ public class DataSource {
             "OPEN SITE",
             "PLATINUM STAFFING",
             "",
-            "Platinum Staffing, Inc. is a full service, staffing agency that has trained and certified recruiters\nthat are specialists in their respective fields. We staff manufacturing machining. IT, medical,\nexecutive level, engineering, administration and more.\n\nPhone: 1(763) 560-8430 中国人 EXT. 300'",
+            "Platinum Staffing, Inc. is a full service, staffing agency that has trained and certified recruiters<br/>that are specialists in their respective fields. We staff manufacturing machining. IT, medical,<br/>executive level, engineering, administration and more.<br/><br/>Phone: 1(763) 560-8430 中国人 EXT. 300'",
             new ApkData(
                     "https://www.platinumstaffing.net",
                     "jade.umn.net",

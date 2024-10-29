@@ -10,6 +10,7 @@ import com.umntv.launcher.main.row.support.AdsCard;
 import com.umntv.launcher.main.row.support.detail.global_girl_net.GlobalGirlNetFragment;
 import com.umntv.launcher.main.row.support.detail.platinum_staffing.PlatinumStaffingFragment;
 import com.umntv.launcher.main.row.support.detail.support.SupportFragment;
+import com.umntv.launcher.main.row.support.detail.the_dale_studios.TheDaleStudiosFragment;
 
 import net.n0ender.com.R;
 
@@ -40,6 +41,10 @@ public class AdsDetailsActivity extends FragmentActivity {
                 } else if (a.getTitle().equals(Ads.PLATINUM_STAFFING)) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.main_browse_fragment, new PlatinumStaffingFragment())
+                            .commitNow();
+                } else if (a.getTitle().equals(Ads.THE_DALE_STUDIOS)) {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.main_browse_fragment, new TheDaleStudiosFragment())
                             .commitNow();
                 } else {
                     getSupportFragmentManager().beginTransaction()

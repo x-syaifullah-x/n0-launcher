@@ -15,6 +15,9 @@ public final class Ads {
 
     public static final String PLATINUM_STAFFING = "PLATINUM STAFFING";
 
+    public static final String THE_DALE_STUDIOS = "THE DALE STUDIOS";
+
+
     private static final List<AdsCard> list = new ArrayList<>();
 
     public static List<AdsCard> setupAds() {
@@ -30,7 +33,7 @@ public final class Ads {
                     VENDORS_SUPPORT,
                     GLOBAL_GIRLS_NET,
                     PLATINUM_STAFFING,
-                    "THE DALE STUDIOS",
+                    THE_DALE_STUDIOS,
                     TITLE_LEEWAY_ENDEAVORS
             };
             String[] description = {
