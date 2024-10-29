@@ -9,8 +9,8 @@ import java.util.List;
 
 public class DataSource {
     private static final OverviewItem PLAY = new OverviewItem(
-            R.drawable.ic_ads_global_inc_card,
-            R.drawable.ic_ads_global_inc_bg,
+            R.drawable.ic_ads_dale_studios,
+            R.drawable.ic_ads_dale_studios,
             "PLAY",
             "THE DALE STUDIOS",
             "",
@@ -23,8 +23,8 @@ public class DataSource {
     );
 
     private static final OverviewItem OPEN_SITE = new OverviewItem(
-            R.drawable.ic_ads_global_inc_card,
-            R.drawable.ic_ads_global_inc_bg,
+            R.drawable.ic_ads_dale_studios,
+            R.drawable.ic_ads_dale_studios,
             "OPEN SITE",
             "THE DALE STUDIOS",
             "",

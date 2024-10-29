@@ -1,4 +1,4 @@
-package com.umntv.launcher.main.row.support.detail.platinum_staffing.global_girl_net;
+package com.umntv.launcher.main.row.support.detail.leeway;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -13,9 +13,9 @@ import com.umntv.launcher.util.Admob;
 
 import net.n0ender.com.R;
 
-public class GlobalGirlNetFragment extends BaseDetailFragment {
+public class LeewayFragment extends BaseDetailFragment {
 
-    public GlobalGirlNetFragment() {
+    public LeewayFragment() {
         super(DataSource.items);
     }
 

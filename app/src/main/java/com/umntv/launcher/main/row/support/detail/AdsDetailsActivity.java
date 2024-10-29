@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentActivity;
 import com.umntv.launcher.main.row.support.Ads;
 import com.umntv.launcher.main.row.support.AdsCard;
 import com.umntv.launcher.main.row.support.detail.global_girl_net.GlobalGirlNetFragment;
+import com.umntv.launcher.main.row.support.detail.leeway.LeewayFragment;
 import com.umntv.launcher.main.row.support.detail.platinum_staffing.PlatinumStaffingFragment;
 import com.umntv.launcher.main.row.support.detail.support.SupportFragment;
 import com.umntv.launcher.main.row.support.detail.the_dale_studios.TheDaleStudiosFragment;
@@ -46,9 +47,9 @@ public class AdsDetailsActivity extends FragmentActivity {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.main_browse_fragment, new TheDaleStudiosFragment())
                             .commitNow();
-                } else {
+                } else if (a.getTitle().equals(Ads.TITLE_LEEWAY_ENDEAVORS)) {
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.main_browse_fragment, new AdsDetailsFragment())
+                            .replace(R.id.main_browse_fragment, new LeewayFragment())
                             .commitNow();
                 }
             }
