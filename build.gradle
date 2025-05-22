@@ -50,7 +50,11 @@ buildscript {
                     details.useVersion "$vAndroidxCoordinatorLayout"
                 }
                 if (details.requested.group == "androidx.core") {
-                    details.useVersion "$vAndroidxCore"
+                    if ("${details.requested}".contains("androidx.core:core-viewtree:")) {
+                        details.useVersion "$vAndroidxCoreViewTree"
+                    } else {
+                        details.useVersion "$vAndroidxCore"
+                    }
                 }
                 if (details.requested.group == "androidx.cursoradapter") {
                     details.useVersion "$vAndroidxCursorAdapter"
@@ -199,34 +203,10 @@ buildscript {
     }
 }
 
-plugins {
-    id "com.google.devtools.ksp" version "$vKsp" apply false
-}
-
-addRepos(repositories)
-
 allprojects {
     addRepos(repositories)
-
-//    String userName = System.getProperty("user.name")
-//    if (userName == "xxx") {
-//        String userHomeDir = System.getProperty("user.home")
-//        String userCacheDir = "${userHomeDir}/.cache"
-//        boolean projectInCacheDir = projectDir.path.contains(userCacheDir)
-//        if (!projectInCacheDir) {
-//            buildDir = "${userCacheDir}/android/studio/project/${rootProject.name}/${project.name}/build"
-//        }
-//    }
-
-    // handle warning This class can only be used with the compiler argument "-opt-in=kotlin.RequiresOptIn"
-//    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile)
-//            .configureEach {
-//                kotlinOptions {
-//                    freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
-//                }
-//            }
 }
 
 tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+    it.delete rootProject.layout.buildDirectory
 }
