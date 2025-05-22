@@ -166,7 +166,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
         ArrayObjectAdapter actionAdapter = new ArrayObjectAdapter();
 
         switch (mSelectedRadio.getTitle()) {
-            case Radio.TRAP_BEATS_NAME -> {
+            case Radio.FIT_WORKOUT -> {
                 for (int i = 0; i < TRAP_BEATS_PLAY_LIST.length; i++) {
                     actionAdapter.add(new Action(i, TRAP_BEATS_PLAY_LIST[i].titleTab));
                 }
@@ -176,7 +176,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     actionAdapter.add(new Action(i, HMONG_PLAY_LIST[i].titleTab));
                 }
             }
-            case Radio.UMN_PLAYLIST -> {
+            case Radio.FITON -> {
                 for (int i = 0; i < UMN_PLAY_LIST.length; i++) {
                     actionAdapter.add(new Action(i, UMN_PLAY_LIST[i].titleTab));
                 }
@@ -217,7 +217,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                 if (action != null) {
                     int index = ((int) action.getId());
                     switch (mSelectedRadio.getTitle()) {
-                        case Radio.UMN_PLAYLIST -> {
+                        case Radio.FITON -> {
                             UmnPlayList umnPlayList = UMN_PLAY_LIST[index];
                             String title = umnPlayList.title;
                             RadioCard radioCard = new RadioCard();
@@ -251,7 +251,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                             detailsOverviewRow.setItem(radioCard);
                             detailsOverviewRow.setImageDrawable(ContextCompat.getDrawable(requireContext(), umnPlayList.icon));
                         }
-                        case Radio.TRAP_BEATS_NAME -> {
+                        case Radio.FIT_WORKOUT -> {
                             UmnPlayList umnPlayList = TRAP_BEATS_PLAY_LIST[index];
                             String title = umnPlayList.title;
                             RadioCard radioCard = new RadioCard();
@@ -285,7 +285,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
         detailsPresenter.setOnActionClickedListener(action -> {
             int index = (int) action.getId();
             switch (mSelectedRadio.getTitle()) {
-                case Radio.TRAP_BEATS_NAME: {
+                case Radio.FIT_WORKOUT: {
                     UmnPlayList umnPlayList = TRAP_BEATS_PLAY_LIST[index];
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     try {
@@ -315,7 +315,7 @@ public class RadioDetailsFragment extends DetailsSupportFragment {
                     }
                     break;
                 }
-                case Radio.UMN_PLAYLIST: {
+                case Radio.FITON: {
                     UmnPlayList umnPlayList = UMN_PLAY_LIST[index];
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     try {
