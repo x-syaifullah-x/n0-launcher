@@ -1,13 +1,16 @@
 package com.umntv.launcher.main.row.utilities;
 
 import net.n0ender.com.R;
-import com.umntv.launcher.main.row.utilities.details.UtilitiesDetailsActivity;
+
 import com.umntv.launcher.util.ResourceHelpers;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Utilities {
+
+    public static final String DATA_EXTRA_REMOTE_SUPPORT = "DATA_EXTRA_REMOTE_SUPPORT";
+    public static final String DATA_EXTRA_PRELOAD_TV = "DATA_EXTRA_PRELOAD_TV";
 
     private final static List<UtilitiesCard> data = new ArrayList<>();
 
@@ -17,12 +20,12 @@ public class Utilities {
 
         String[] extras = {
                 null,
-                UtilitiesDetailsActivity.DATA_EXTRA_REMOTE_SUPPORT,
+                DATA_EXTRA_REMOTE_SUPPORT,
                 null,
 //                null,
-                UtilitiesDetailsActivity.DATA_EXTRA_PRELOAD_TV,
+                DATA_EXTRA_PRELOAD_TV,
 //                null,
-//                UtilitiesDetailsActivity.DATA_EXTRA_REMOTE_SUPPORT,
+//                DATA_EXTRA_REMOTE_SUPPORT,
                 null
         };
 

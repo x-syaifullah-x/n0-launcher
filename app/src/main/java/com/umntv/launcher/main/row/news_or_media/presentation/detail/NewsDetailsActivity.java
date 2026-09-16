@@ -7,7 +7,6 @@ import androidx.fragment.app.FragmentActivity;
 
 public class NewsDetailsActivity extends FragmentActivity {
 
-    public static final String SHARED_ELEMENT_NAME = "hero";
     public static final String ITEM = "Item";
 
     @Override

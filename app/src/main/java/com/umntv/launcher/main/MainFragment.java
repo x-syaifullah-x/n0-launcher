@@ -9,7 +9,9 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -20,6 +22,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.ContextCompat;
 import androidx.leanback.app.BackgroundManager;
 import androidx.leanback.app.BrowseSupportFragment;
+import androidx.leanback.app.HeadersSupportFragment;
 import androidx.leanback.widget.ArrayObjectAdapter;
 import androidx.leanback.widget.BrowseFrameLayout;
 import androidx.leanback.widget.HeaderItem;
@@ -89,7 +92,7 @@ public class MainFragment extends BrowseSupportFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Admob.setup(requireActivity().findViewById(R.id.adView));
+//        Admob.setup(requireActivity().findViewById(R.id.adView));
 
         prepareBackgroundManager();
         setupUIElements();
@@ -107,13 +110,15 @@ public class MainFragment extends BrowseSupportFragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
         super.onViewCreated(view, savedInstanceState);
 
-        linkUIElements();
+        linkUIElements(view);
 
         linkEventListeners();
 
         workaroundFocus();
+
     }
 
     @Override
@@ -271,14 +276,14 @@ public class MainFragment extends BrowseSupportFragment {
         }
     }
 
-    private void linkUIElements() {
-        mPowerOff = requireView().findViewById(R.id.power_off);
-        mSettings = requireView().findViewById(R.id.title_settings);
-        mClean = requireView().findViewById(R.id.title_clean);
-        mSound = requireActivity().findViewById(R.id.title_sound);
-//        mInfo = requireActivity().findViewById(R.id.info);
-        mNetPlusTv = requireActivity().findViewById(R.id.net_plus_tv);
-        adjustScreen = requireActivity().findViewById(R.id.adjust_screen);
+    private void linkUIElements(View v) {
+        mPowerOff = v.findViewById(R.id.power_off);
+        mSettings = v.findViewById(R.id.title_settings);
+        mClean = v.findViewById(R.id.title_clean);
+        mSound = v.findViewById(R.id.title_sound);
+//        mInfo = v.findViewById(R.id.info);
+        mNetPlusTv = v.findViewById(R.id.net_plus_tv);
+        adjustScreen = v.findViewById(R.id.adjust_screen);
 //        accountProfile = requireActivity().findViewById(R.id.account_profile);
     }
 
