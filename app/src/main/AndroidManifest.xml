@@ -75,21 +75,13 @@
             android:name="com.umntv.launcher.main.DetailsActivity"
             android:screenOrientation="landscape" />
 
-        <activity
-            android:name="com.umntv.launcher.main.row.news_or_media.presentation.detail.NewsDetailsActivity"
-            android:screenOrientation="landscape" />
+<!--        <activity-->
+<!--            android:name="com.umntv.launcher.main.row.news_or_media.presentation.detail.NewsDetailsActivity"-->
+<!--            android:screenOrientation="landscape" />-->
 
-        <activity
-            android:name="com.umntv.launcher.main.row.support.detail.SupportDetailActivity"
-            android:screenOrientation="landscape" />
-
-        <activity
-            android:name="com.umntv.launcher.main.row.utilities.details.UtilitiesDetailsActivity"
-            android:screenOrientation="landscape" />
-
-        <activity
-            android:name="com.umntv.launcher.main.row.radio_workout.detail.RadioDetailsActivity"
-            android:screenOrientation="landscape" />
+<!--        <activity-->
+<!--            android:name="com.umntv.launcher.main.row.radio_workout.detail.RadioDetailsActivity"-->
+<!--            android:screenOrientation="landscape" />-->
 
         <activity
             android:name="com.umntv.launcher.main.row.apps.AppsActivity"

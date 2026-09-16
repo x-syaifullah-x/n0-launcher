@@ -2,17 +2,33 @@ package com.umntv.launcher.main;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
+import com.applovin.mediation.MaxAd;
+import com.applovin.mediation.MaxAdListener;
+import com.applovin.mediation.MaxError;
 import com.applovin.mediation.ads.MaxAdView;
+import com.applovin.mediation.ads.MaxInterstitialAd;
+import com.applovin.sdk.AppLovinSdk;
 import com.umntv.launcher.util.Admob;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import net.n0ender.com.BuildConfig;
 import net.n0ender.com.R;
+
+import com.applovin.mediation.ads.MaxAdView;
 
 public class MainActivity extends FragmentActivity {
 
@@ -26,15 +42,43 @@ public class MainActivity extends FragmentActivity {
 
         setContentView(R.layout.activity_main);
 
-        if (savedInstanceState == null) {
-            MaxAdView v = findViewById(R.id.adView);
-//            v.loadAd();
-            Admob.setup(v);
+//        MaxAdView adView = new MaxAdView(getString(R.string.applovin_ad_unit_id_type_banner), this);
+//        AppLovinSdk.getInstance(adView.getContext()).setMediationProvider("max");
+//
+////        adView.setListener(this);
+////        adView.setRevenueListener(this);
+//
+//        // Set the height of the banner ad based on the device type.
+////        final boolean isTablet = AppLovinSdkUtils.isTablet(this);
+////        final int heightPx = AppLovinSdkUtils.dpToPx(this, isTablet ? 90 : 50);
+//        // Banner width must match the screen to be fully functional.
+//        adView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 90));
+//
+//        // Need to set the background or background color for banners to be fully functional.
+//        adView.setBackgroundColor(Color.BLACK);
+//
+//        final ViewGroup rootView = (ViewGroup) findViewById(android.R.id.content);
+//        rootView.addView(adView);
 
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.main_browse_fragment, new MainFragment())
-                    .commitNow();
-        }
+        // Load the first ad.
+//        adView.loadAd();
+
+
+        MaxAdView v = findViewById(R.id.adView);
+        Admob.setup(v);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main_browse_fragment, new MainFragment())
+                .commitNow();
+
+//        if (savedInstanceState == null) {
+//            MaxAdView v = findViewById(R.id.adView);
+////            v.loadAd();
+//            Admob.setup(v);
+//
+//            getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.main_browse_fragment, new MainFragment())
+//                    .commitNow();
+//        }
 
 //        JSONObject consentObject = new JSONObject();
 //        try {
@@ -79,10 +123,30 @@ public class MainActivity extends FragmentActivity {
 //        });
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        View v = findViewById(R.id.adView);
+
+        if (v instanceof MaxAdView) {
+            ((MaxAdView) v).destroy();
+        }
+    }
+
     @SuppressLint("MissingSuperCall")
     @Override
     public void onBackPressed() {
-        /**/
+        Fragment currentFragment = getSupportFragmentManager()
+                .findFragmentById(R.id.main_browse_fragment); // ganti dengan id container fragment kamu
+
+        if (currentFragment instanceof MainFragment) {
+            // di FragmentA, back ditahan (tidak melakukan apa-apa)
+            // atau bisa tambahkan logic lain, misal double-tap to exit
+        } else {
+            // fragment lain, back tetap jalan normal
+            super.onBackPressed();
+        }
     }
 
     public static void deleteCache(Context context) {

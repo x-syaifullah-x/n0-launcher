@@ -94,18 +94,18 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ic_team_viewer" />
 
-<!--        <ImageButton-->
-<!--            android:id="@+id/info"-->
-<!--            android:layout_width="@dimen/settings_item_width"-->
-<!--            android:layout_height="@dimen/settings_item_width"-->
-<!--            android:layout_marginEnd="4dp"-->
-<!--            android:background="@drawable/selector_top_button"-->
-<!--            android:contentDescription="@string/info"-->
-<!--            android:focusable="true"-->
-<!--            android:nextFocusDown="@id/main_browse_fragment"-->
-<!--            android:padding="@dimen/settings_item_padding"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:src="@drawable/ic_info" />-->
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/info"-->
+        <!--            android:layout_width="@dimen/settings_item_width"-->
+        <!--            android:layout_height="@dimen/settings_item_width"-->
+        <!--            android:layout_marginEnd="4dp"-->
+        <!--            android:background="@drawable/selector_top_button"-->
+        <!--            android:contentDescription="@string/info"-->
+        <!--            android:focusable="true"-->
+        <!--            android:nextFocusDown="@id/main_browse_fragment"-->
+        <!--            android:padding="@dimen/settings_item_padding"-->
+        <!--            android:scaleType="centerCrop"-->
+        <!--            android:src="@drawable/ic_info" />-->
 
         <ImageButton
             android:id="@+id/adjust_screen"
@@ -120,18 +120,18 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ic_adjust_screen" />
 
-<!--        <ImageButton-->
-<!--            android:id="@+id/account_profile"-->
-<!--            android:layout_width="@dimen/settings_item_width"-->
-<!--            android:layout_height="@dimen/settings_item_width"-->
-<!--            android:layout_marginEnd="6dp"-->
-<!--            android:background="@drawable/selector_top_button"-->
-<!--            android:contentDescription="@string/info"-->
-<!--            android:focusable="true"-->
-<!--            android:nextFocusDown="@id/main_browse_fragment"-->
-<!--            android:padding="@dimen/settings_item_padding"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:src="@drawable/title_account_profile" />-->
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/account_profile"-->
+        <!--            android:layout_width="@dimen/settings_item_width"-->
+        <!--            android:layout_height="@dimen/settings_item_width"-->
+        <!--            android:layout_marginEnd="6dp"-->
+        <!--            android:background="@drawable/selector_top_button"-->
+        <!--            android:contentDescription="@string/info"-->
+        <!--            android:focusable="true"-->
+        <!--            android:nextFocusDown="@id/main_browse_fragment"-->
+        <!--            android:padding="@dimen/settings_item_padding"-->
+        <!--            android:scaleType="centerCrop"-->
+        <!--            android:src="@drawable/title_account_profile" />-->
     </LinearLayout>
 
     <LinearLayout

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.DrawableRes;
 import androidx.core.content.ContextCompat;
@@ -38,6 +39,11 @@ public class BaseDetailFragment extends DetailsSupportFragment {
     private ClassPresenterSelector mPresenterSelector;
 
     private ArrayObjectAdapter mAdapter;
+
+    @Override
+    public void setTitleView(View titleView) {
+        titleView.setVisibility(View.GONE);
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

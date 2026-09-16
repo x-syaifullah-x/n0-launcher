@@ -19,7 +19,7 @@ public class DownloadCenterDetailFragment extends BaseDetailFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Admob.setup(requireActivity().findViewById(R.id.adView));
+//        Admob.setup(requireActivity().findViewById(R.id.adView));
     }
 
     @Override

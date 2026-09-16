@@ -136,7 +136,7 @@ public class NewsDetailsFragment extends DetailsSupportFragment {
 
         // Hook up transition element.
         FullWidthDetailsOverviewSharedElementHelper sharedElementHelper = new FullWidthDetailsOverviewSharedElementHelper();
-        sharedElementHelper.setSharedElementEnterTransition(getActivity(), NewsDetailsActivity.SHARED_ELEMENT_NAME);
+        sharedElementHelper.setSharedElementEnterTransition(getActivity(), "hero");
         detailsPresenter.setListener(sharedElementHelper);
         detailsPresenter.setParticipatingEntranceTransition(true);
 

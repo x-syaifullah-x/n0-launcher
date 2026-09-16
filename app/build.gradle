@@ -83,7 +83,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+
     implementation "com.applovin:applovin-sdk:12.6.1"
+//    implementation "com.applovin:applovin-sdk:13.0.0"
 
     implementation "androidx.leanback:leanback:$vLeanback"
     implementation "androidx.appcompat:appcompat:$vAndroidxAppCompat"
