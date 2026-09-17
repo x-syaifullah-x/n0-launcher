@@ -6,6 +6,7 @@
     <!-- APPLOVIN ADMOB START -->
 <!--    <string name="applovin_ad_unit_id_type_banner">9303d9b108943dc1</string>-->
     <string name="applovin_ad_unit_id_type_banner">5b36cec3218b7d31</string>
+    <string name="applovin_ad_unit_id_type_banner_detail">aff44f44f9aa21d0</string>
     <string name="applovin_sdk_key">zzWuLBq8NTCIhWHKmcTLXfazN9_JXAK3NGAZmkIEQn54cOESfbGVFGhqbKuE2DaT9vyZHzu7f0sQOKC5O9HDdn</string>
     <!-- APPLOVIN ADMOB END -->
 </resources>

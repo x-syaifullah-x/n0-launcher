@@ -72,6 +72,10 @@
         </activity>
 
         <activity
+            android:name="com.umntv.launcher.main.DetailsActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
             android:name="com.umntv.launcher.main.row.apps.AppsActivity"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppDrawer" />

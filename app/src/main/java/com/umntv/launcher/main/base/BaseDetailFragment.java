@@ -17,8 +17,10 @@ import androidx.leanback.widget.DetailsOverviewRow;
 import androidx.leanback.widget.FullWidthDetailsOverviewRowPresenter;
 import androidx.leanback.widget.FullWidthDetailsOverviewSharedElementHelper;
 
+import com.applovin.mediation.ads.MaxAdView;
 import com.umntv.launcher.constant.AppBuild;
 import com.umntv.launcher.main.row.asian_media.detail.jade_cinema.DataSource;
+import com.umntv.launcher.util.Admob;
 import com.umntv.launcher.util.AndroidStore;
 import com.umntv.launcher.util.view.dialog.ApkUtil;
 import com.umntv.launcher.util.view.dialog.DialogPassword;

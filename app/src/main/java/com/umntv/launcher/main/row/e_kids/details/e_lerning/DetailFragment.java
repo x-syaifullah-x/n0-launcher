@@ -25,18 +25,24 @@ public class DetailFragment extends BaseDetailFragment {
 
     @Override
     public void openOrDownload(ApkData apkData) {
-        try {
-            Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage("com.umn.n0.browser");
-            if (launchIntent == null) return;
-            launchIntent.setData(Uri.parse(apkData.url));
-//            intent.setPackage("com.jio.web.androidtv");
-            startActivity(launchIntent);
-        } catch (Throwable t) {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-            String uriString = apkData.url;
-            intent.setData(Uri.parse(uriString));
-            startActivity(intent);
-        }
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+//        Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+        String uriString = apkData.url;
+        intent.setData(Uri.parse(uriString));
+        startActivity(intent);
+
+//        try {
+//            Intent launchIntent = requireActivity().getPackageManager().getLaunchIntentForPackage("com.umn.n0.browser");
+//            if (launchIntent == null) return;
+//            launchIntent.setData(Uri.parse(apkData.url));
+////            intent.setPackage("com.jio.web.androidtv");
+//            startActivity(launchIntent);
+//        } catch (Throwable t) {
+//            Intent intent = new Intent(Intent.ACTION_VIEW);
+//            Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+//            String uriString = apkData.url;
+//            intent.setData(Uri.parse(uriString));
+//            startActivity(intent);
+//        }
     }
 }

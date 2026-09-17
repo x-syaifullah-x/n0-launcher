@@ -4,7 +4,8 @@ import androidx.annotation.DrawableRes;
 
 public class OverviewItem {
 
-    public static final String SUBTITLE_DEFAULT = "Datadogs Communications | Universal Media Network";
+    //    public static final String SUBTITLE_DEFAULT = "Datadogs Communications | Universal Media Network";
+    public static final String SUBTITLE_DEFAULT = "Datadogs Communications | SEQUE INC";
 
     @DrawableRes
     public final int icon;

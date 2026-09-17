@@ -9,6 +9,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
+import com.umntv.launcher.main.DetailsActivity;
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.NewsDetailsFragment;
 import com.umntv.launcher.main.row.radio_workout.detail.RadioDetailsFragment;
 import com.umntv.launcher.main.row.support.Support;
