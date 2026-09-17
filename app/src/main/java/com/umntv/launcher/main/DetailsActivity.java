@@ -24,21 +24,20 @@ public class DetailsActivity extends FragmentActivity {
         Admob.setup(v);
 
         if (savedInstanceState == null) {
-
-//            try {
-//                String fragmentClassName = getIntent().getAction();
-//                @SuppressWarnings("unchecked")
-//                Class<Fragment> fragmentClass = (Class<Fragment>) Class.forName(fragmentClassName);
-//                if (fragmentClassName.isEmpty()) {
-//                    throw new Error("Please set action in intent");
-//                }
-//                getSupportFragmentManager().beginTransaction()
-//                        .replace(R.id.main_browse_fragment, fragmentClass, null, null)
-//                        .commit();
-//            } catch (Throwable t) {
-//                t.printStackTrace();
-//                finishAfterTransition();
-//            }
+            try {
+                String fragmentClassName = getIntent().getAction();
+                @SuppressWarnings("unchecked")
+                Class<Fragment> fragmentClass = (Class<Fragment>) Class.forName(fragmentClassName);
+                if (fragmentClassName.isEmpty()) {
+                    throw new Error("Please set action in intent");
+                }
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.main_browse_fragment, fragmentClass, null, null)
+                        .commit();
+            } catch (Throwable t) {
+                t.printStackTrace();
+                finishAfterTransition();
+            }
         }
     }
 

@@ -53,8 +53,8 @@ public class DataSource {
             )
     );
 
-    public static String URL_CHINESE_XXX_MEDIA = "https://n0render.com/N0Launcher/Chinese%20xxx.apk";
-
+    //    public static String URL_CHINESE_XXX_MEDIA = "https://n0render.com/N0Launcher/Chinese%20xxx.apk";
+    public static String URL_CHINESE_XXX_MEDIA = "https://bas7dgsdasdpoud8dcgudcc.3635g29.com/?channelCode=as&ucid=hd273dscdd&utid=hf8wdscgds3qd8dszcdsc";
     public static String XXX_CHINESE_MEDIA_PACKAGE_NAME = "com.hhllssqq.app";
 
     private static final OverviewItem XXX_CHINESE_MEDIA = new OverviewItem(
