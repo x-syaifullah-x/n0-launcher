@@ -6,9 +6,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.widget.Toast;
 
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-
 import com.umntv.launcher.main.DetailsActivity;
 import com.umntv.launcher.main.row.news_or_media.presentation.detail.NewsDetailsFragment;
 import com.umntv.launcher.main.row.radio_workout.detail.RadioDetailsFragment;
@@ -87,39 +84,20 @@ public class CardVisitor extends CardVisitorKt {
     }
 
     public void click(SupportCard supportCard) {
-//        Intent intent = new Intent(getContext(), SupportDetailActivity.class);
-//        intent.putExtra(SupportDetailActivity.ITEM, supportCard);
-//        getContext().startActivity(intent);
-
-        FragmentActivity fragmentActivity = (FragmentActivity) getContext();
-        Fragment fragment = null;
-
-//        Intent intent = new Intent(getContext(), DetailsActivity.class);
-        if (supportCard.getTitle().equals(Support.VENDORS_SUPPORT)) {
-//            intent.setAction(SupportFragment.class.getName());
-            fragment = new SupportFragment();
-        } else if (supportCard.getTitle().equals(Support.GLOBAL_GIRLS_NET)) {
-//            intent.setAction(GlobalGirlNetFragment.class.getName());
-            fragment = new GlobalGirlNetFragment();
-        } else if (supportCard.getTitle().equals(Support.PLATINUM_STAFFING)) {
-//            intent.setAction(PlatinumStaffingFragment.class.getName());
-            fragment = new PlatinumStaffingFragment();
-        } else if (supportCard.getTitle().equals(Support.THE_DALE_STUDIOS)) {
-            fragment = new TheDaleStudiosFragment();
-//            intent.setAction(TheDaleStudiosFragment.class.getName());
-        } else if (supportCard.getTitle().equals(Support.TITLE_LEEWAY_ENDEAVORS)) {
-            fragment = new LeewayFragment();
-//            intent.setAction(LeewayFragment.class.getName());
+        Intent intent = new Intent(getContext(), DetailsActivity.class);
+        switch (supportCard.getTitle()) {
+            case Support.VENDORS_SUPPORT -> intent.setAction(SupportFragment.class.getName());
+            case Support.GLOBAL_GIRLS_NET ->
+                    intent.setAction(GlobalGirlNetFragment.class.getName());
+            case Support.PLATINUM_STAFFING ->
+                    intent.setAction(PlatinumStaffingFragment.class.getName());
+            case Support.THE_DALE_STUDIOS ->
+                    intent.setAction(TheDaleStudiosFragment.class.getName());
+            case Support.TITLE_LEEWAY_ENDEAVORS -> intent.setAction(LeewayFragment.class.getName());
         }
 
-        if (fragment != null) {
-            fragmentActivity.getSupportFragmentManager()
-                    .beginTransaction()
-                    .addToBackStack(null)
-                    .add(R.id.main_browse_fragment, fragment, null)
-                    .commit();
-        }
-//        getContext().startActivity(intent);
+        if (!Objects.requireNonNull(intent.getAction()).isBlank())
+            getContext().startActivity(intent);
     }
 
     public void click(NewsMediaModel newsMediaModel) {
@@ -138,43 +116,17 @@ public class CardVisitor extends CardVisitorKt {
             }
         } else {
             if (newsMediaModel.getTitle().equals(NewsOrMediaRepository.INT_NEWS)) {
-//                Intent intent = new Intent(getContext(), DetailsActivity.class);
-//                intent.setAction(IntNewsFragment.class.getName());
-//                getContext().startActivity(intent);
-
-                FragmentActivity fragmentActivity = (FragmentActivity) getContext();
-                fragmentActivity.getSupportFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(null)
-                        .add(R.id.main_browse_fragment, new IntNewsFragment(), null)
-                        .commit();
-
+                Intent intent = new Intent(getContext(), DetailsActivity.class);
+                intent.setAction(IntNewsFragment.class.getName());
+                getContext().startActivity(intent);
             } else if (newsMediaModel.getTitle().equals(NewsOrMediaRepository.YOUTUBE_ENJOYABLES)) {
-//                Intent intent = new Intent(getContext(), DetailsActivity.class);
-//                intent.setAction(YoutubeShortsFragment.class.getName());
-//                getContext().startActivity(intent);
-
-                FragmentActivity fragmentActivity = (FragmentActivity) getContext();
-                fragmentActivity.getSupportFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(null)
-                        .add(R.id.main_browse_fragment, new YoutubeShortsFragment(), null)
-                        .commit();
+                Intent intent = new Intent(getContext(), DetailsActivity.class);
+                intent.setAction(YoutubeShortsFragment.class.getName());
+                getContext().startActivity(intent);
             } else {
-//                Intent intent = new Intent(getContext(), NewsDetailsActivity.class);
-//                intent.putExtra(NewsDetailsActivity.ITEM, newsMediaModel);
-//                getContext().startActivity(intent);
-
-//                Intent intent = new Intent(getContext(), DetailsActivity.class);
-//                intent.putExtra(NewsDetailsActivity.ITEM, newsMediaModel);
-//                intent.setAction(NewsDetailsFragment.class.getName());
-//                getContext().startActivity(intent);
-                FragmentActivity fragmentActivity = (FragmentActivity) getContext();
-                fragmentActivity.getSupportFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(null)
-                        .add(R.id.main_browse_fragment, new NewsDetailsFragment(), null)
-                        .commit();
+                Intent intent = new Intent(getContext(), DetailsActivity.class);
+                intent.setAction(NewsDetailsFragment.class.getName());
+                getContext().startActivity(intent);
 
             }
         }
@@ -201,50 +153,22 @@ public class CardVisitor extends CardVisitorKt {
                 }
             }
         } else {
-//            Intent intent = new Intent(getContext(), RadioDetailsActivity.class);
-//            intent.putExtra(RadioDetailsActivity.ITEM, radioCard);
-//            getContext().startActivity(intent);
-
-//            Intent intent = new Intent(getContext(), DetailsActivity.class);
-//            intent.setAction(RadioDetailsFragment.class.getName());
-//            getContext().startActivity(intent);
-
-            FragmentActivity fragmentActivity = (FragmentActivity) getContext();
-            fragmentActivity.getSupportFragmentManager()
-                    .beginTransaction()
-                    .addToBackStack(null)
-                    .add(R.id.main_browse_fragment, new RadioDetailsFragment(), null)
-                    .commit();
+            Intent intent = new Intent(getContext(), DetailsActivity.class);
+            intent.setAction(RadioDetailsFragment.class.getName());
+            getContext().startActivity(intent);
         }
     }
 
     public void click(UtilitiesCard utilitiesCard) {
         if (utilitiesCard.getDataExtra() != null) {
-//            Intent i = new Intent(getContext(), UtilitiesDetailsActivity.class);
-//            i.putExtra(utilitiesCard.getDataExtra(), true);
-
-            FragmentActivity fragmentActivity = (FragmentActivity) getContext();
-            Fragment fragment = null;
-
-
-//            Intent i = new Intent(getContext(), DetailsActivity.class);
+            Intent intent = new Intent(getContext(), DetailsActivity.class);
             if (Objects.equals(utilitiesCard.getDataExtra(), Utilities.DATA_EXTRA_REMOTE_SUPPORT)) {
-                fragment = new DetailRemoteSupportTvFragment();
-//                i.setAction(DetailRemoteSupportTvFragment.class.getName());
+                intent.setAction(DetailRemoteSupportTvFragment.class.getName());
             } else if (Objects.equals(utilitiesCard.getDataExtra(), Utilities.DATA_EXTRA_PRELOAD_TV)) {
-                fragment = new DetailPreloadTvFragment();
-//                i.setAction(DetailPreloadTvFragment.class.getName());
+                intent.setAction(DetailPreloadTvFragment.class.getName());
             }
-
-            if (fragment != null) {
-                fragmentActivity.getSupportFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(null)
-                        .add(R.id.main_browse_fragment, fragment, null)
-                        .commit();
-            }
-
-//            getContext().startActivity(i);
+            if (!Objects.requireNonNull(intent.getAction()).isBlank())
+                getContext().startActivity(intent);
         } else if (utilitiesCard.getPackageName() != null) {
             Intent launchIntent = getContext().getPackageManager().getLaunchIntentForPackage(utilitiesCard.getPackageName());
             if (launchIntent != null) {
@@ -273,16 +197,9 @@ public class CardVisitor extends CardVisitorKt {
                 AndroidStore.open(getContext(), kidsCard.getPackageName());
             }
         } else {
-            FragmentActivity fragmentActivity = (FragmentActivity) getContext();
-            fragmentActivity.getSupportFragmentManager()
-                    .beginTransaction()
-                    .addToBackStack(null)
-                    .add(R.id.main_browse_fragment, new com.umntv.launcher.main.row.e_kids.details.e_lerning.DetailFragment(), null)
-                    .commit();
-
-//            Intent intent = new Intent(getContext(), DetailsActivity.class);
-//            intent.setAction(com.umntv.launcher.main.row.e_kids.details.e_lerning.DetailFragment.class.getName());
-//            getContext().startActivity(intent);
+            Intent intent = new Intent(getContext(), DetailsActivity.class);
+            intent.setAction(com.umntv.launcher.main.row.e_kids.details.e_lerning.DetailFragment.class.getName());
+            getContext().startActivity(intent);
         }
     }
 
@@ -309,69 +226,34 @@ public class CardVisitor extends CardVisitorKt {
                     e.printStackTrace();
                 }
             } else {
-                FragmentActivity fragmentActivity = (FragmentActivity) getContext();
-                Fragment fragment = null;
+                Intent intent = new Intent(getContext(), DetailsActivity.class);
 
-                String title = umnTvCard.getTitle();
-
-//                Intent intent = new Intent(getContext(), DetailsActivity.class);
-
-                switch (title) {
+                switch (umnTvCard.getTitle()) {
                     case UmnTv.TITLE_NETWORK ->
-//                            intent.setAction(NetworkDetailFragment.class.getName());
-                            fragment = new NetworkDetailFragment();
+                            intent.setAction(NetworkDetailFragment.class.getName());
                     case UmnTv.TITLE_DOWNLOAD_CENTER -> {
-//                        Intent launchIntentForPackage = mContext.getPackageManager().getLaunchIntentForPackage("com.umn.n0.browser");
-//                        if (launchIntentForPackage != null) {
-//                            intent = launchIntentForPackage;
-//                        } else {
-//                            intent = new Intent(Intent.ACTION_VIEW);
-//                            intent.setData(Uri.parse("https://n0render.com/dc"));
-//                        }
-
-//                        intent.setAction(DownloadCenterDetailFragment.class.getName());
-                        fragment = new DownloadCenterDetailFragment();
+                        intent.setAction(DownloadCenterDetailFragment.class.getName());
                     }
                     case UmnTv.TITLE_MEDIA_CENTER -> {
-//                        intent.setAction(MediaCenterDetailFragment.class.getName());
-                        fragment = new MediaCenterDetailFragment();
+                        intent.setAction(MediaCenterDetailFragment.class.getName());
                     }
-                    case UmnTv.TITLE_FAQ ->
-//                            intent.setAction(FaqDetailFragment.class.getName());
-                            fragment = new FaqDetailFragment();
+                    case UmnTv.TITLE_FAQ -> intent.setAction(FaqDetailFragment.class.getName());
                     case UmnTv.TITLE_APP_DRAWER -> {
-                        Intent intent = new Intent(getContext(), AppsActivity.class);
+                        intent = new Intent(getContext(), AppsActivity.class);
                         intent.setAction(AppDrawerFragment.class.getName());
-                        getContext().startActivity(intent);
-                        return;
                     }
                 }
 
-                if (fragment != null) {
-                    fragmentActivity.getSupportFragmentManager()
-                            .beginTransaction()
-                            .addToBackStack(null)
-                            .add(R.id.main_browse_fragment, fragment, null)
-                            .commit();
-                }
-
-//                getContext().startActivity(intent);
+                getContext().startActivity(intent);
             }
         }
     }
 
     public void click(GamesCardApp gamesCardApp) {
         if (gamesCardApp.getDetail() != null) {
-//            Intent intent = new Intent(getContext(), DetailsActivity.class);
-//            intent.setAction(gamesCardApp.getDetail().getName());
-//            getContext().startActivity(intent);
-
-            FragmentActivity fragmentActivity = (FragmentActivity) getContext();
-            fragmentActivity.getSupportFragmentManager()
-                    .beginTransaction()
-                    .addToBackStack(null)
-                    .add(R.id.main_browse_fragment, gamesCardApp.getDetail(), null)
-                    .commit();
+            Intent intent = new Intent(getContext(), DetailsActivity.class);
+            intent.setAction(gamesCardApp.getDetail().getName());
+            getContext().startActivity(intent);
             return;
         }
 
@@ -389,16 +271,9 @@ public class CardVisitor extends CardVisitorKt {
 
     public void click(AsianMediaCard asianMediaCard) {
         if (asianMediaCard.getPackageName() == null) {
-//            Intent intent = new Intent(getContext(), DetailsActivity.class);
-//            intent.setAction(DetailFragment.class.getName());
-//            getContext().startActivity(intent);
-
-            FragmentActivity fragmentActivity = (FragmentActivity) getContext();
-            fragmentActivity.getSupportFragmentManager()
-                    .beginTransaction()
-                    .addToBackStack(null)
-                    .add(R.id.main_browse_fragment, new DetailFragment(), null)
-                    .commit();
+            Intent intent = new Intent(getContext(), DetailsActivity.class);
+            intent.setAction(DetailFragment.class.getName());
+            getContext().startActivity(intent);
             return;
         }
 
