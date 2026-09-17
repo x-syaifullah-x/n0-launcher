@@ -68,7 +68,7 @@ public class DataSource {
                     "Users must be 18 years of age or older.<br/> This application requires a traditional mouse and keyboard separate or combined.",
             new ApkData(
                     URL_CHINESE_XXX_MEDIA,
-                    XXX_CHINESE_MEDIA_PACKAGE_NAME,
+                    null,
                     true
             )
     );

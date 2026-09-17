@@ -26,6 +26,14 @@ public class DetailFragment extends BaseDetailFragment {
 
     @Override
     public void openOrDownload(ApkData apkData) {
+        if (apkData.url.equals(DataSource.URL_CHINESE_XXX_MEDIA)) {
+            String uriString = apkData.url;
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(uriString));
+            requireActivity().startActivity(intent);
+            return;
+        }
+
         if (apkData.packageName.contains(PackageName.N0_BROWSER)) {
             String[] a = apkData.packageName.split(",");
             String packageName = a[0];

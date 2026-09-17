@@ -32,7 +32,7 @@ public class DetailsActivity extends FragmentActivity {
                     throw new Error("Please set action in intent");
                 }
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.main_browse_fragment, fragmentClass, null, null)
+                        .replace(R.id.main_browse_fragment_detail, fragmentClass, null, null)
                         .commit();
             } catch (Throwable t) {
                 t.printStackTrace();

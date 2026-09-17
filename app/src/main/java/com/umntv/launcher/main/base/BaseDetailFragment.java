@@ -116,21 +116,24 @@ public class BaseDetailFragment extends DetailsSupportFragment {
 
     protected void onActionClickListener(OverviewItem overviewItem) {
         if (overviewItem.apkData.isPrivate) {
-            if (overviewItem.apkData.packageName.equalsIgnoreCase(com.umntv.launcher.main.row.games.retro_center.DataSource.RETRO_MODE.apkData.packageName)) {
-                new DialogPassword(requireContext(), "retro_mode")
-                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
-                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
-                        .show();
-                return;
+            if (overviewItem.apkData.packageName != null) {
+                if (overviewItem.apkData.packageName.equalsIgnoreCase(com.umntv.launcher.main.row.games.retro_center.DataSource.RETRO_MODE.apkData.packageName)) {
+                    new DialogPassword(requireContext(), "retro_mode")
+                            .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
+                            .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
+                            .show();
+                    return;
+                }
+
+                if (overviewItem.apkData.packageName.contains(DataSource.URL_LIST_CRAWLER)) {
+                    new DialogPassword(requireContext(), "2023")
+                            .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
+                            .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
+                            .show();
+                    return;
+                }
             }
 
-            if (overviewItem.apkData.packageName.contains(DataSource.URL_LIST_CRAWLER)) {
-                new DialogPassword(requireContext(), "2023")
-                        .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)
-                        .setOnConfirmListener(() -> openOrDownload(overviewItem.apkData))
-                        .show();
-                return;
-            }
             if (DataSource.URL_CHINESE_XXX_MEDIA.equals(overviewItem.apkData.url)) {
                 new DialogPassword(requireContext(), "N0Render2024")
                         .setInputPasswordHint("Please enter the password to access " + overviewItem.titleAction)

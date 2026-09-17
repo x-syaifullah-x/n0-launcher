@@ -70,7 +70,7 @@ public class MainActivity extends FragmentActivity {
         Admob.setup(v);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.main_browse_fragment, new MainFragment())
-                .commitNow();
+                .commit();
 
 //        if (savedInstanceState == null) {
 //            MaxAdView v = findViewById(R.id.adView);
