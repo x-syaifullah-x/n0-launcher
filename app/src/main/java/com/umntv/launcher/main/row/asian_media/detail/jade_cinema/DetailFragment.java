@@ -27,10 +27,17 @@ public class DetailFragment extends BaseDetailFragment {
     @Override
     public void openOrDownload(ApkData apkData) {
         if (apkData.url.equals(DataSource.URL_CHINESE_XXX_MEDIA)) {
-            String uriString = apkData.url;
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse(uriString));
-            requireActivity().startActivity(intent);
+            try {
+                intent.setData(Uri.parse(apkData.url));
+                intent.setPackage(PackageName.N0_BROWSER);
+                startActivity(intent);
+            } catch (Throwable t) {
+                Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                String uriString = apkData.url;
+                intent.setData(Uri.parse(uriString));
+                startActivity(intent);
+            }
             return;
         }
 
