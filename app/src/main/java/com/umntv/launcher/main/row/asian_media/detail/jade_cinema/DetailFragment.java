@@ -3,6 +3,7 @@ package com.umntv.launcher.main.row.asian_media.detail.jade_cinema;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.umntv.launcher.constant.PackageName;
@@ -27,15 +28,20 @@ public class DetailFragment extends BaseDetailFragment {
     @Override
     public void openOrDownload(ApkData apkData) {
         if (apkData.url.equals(DataSource.URL_CHINESE_XXX_MEDIA)) {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
+            Uri a = Uri.parse(apkData.url);
+            Uri u = new Uri.Builder()
+                    .scheme("n0browser")
+                    .authority(a.getAuthority())
+                    .path(a.getPath())
+                    .build();
+            Intent launchIntent = new Intent(Intent.ACTION_VIEW, u);
+            launchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             try {
-                intent.setData(Uri.parse(apkData.url));
-                intent.setPackage(PackageName.N0_BROWSER);
-                startActivity(intent);
-            } catch (Throwable t) {
-                Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-                String uriString = apkData.url;
-                intent.setData(Uri.parse(uriString));
+                startActivity(launchIntent);
+            } catch (Throwable e) {
+                Toast.makeText(getContext(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(a);
                 startActivity(intent);
             }
             return;
