@@ -19,7 +19,7 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "",
             new ApkData(
-                    "https://n0render.com/N0Launcher/N0accounting.apk",
+                    "http://n0render.com/N0Launcher/N0accounting.apk",
                     PACKAGE_NAME_MY_ACCOUNT,
                     false
             )

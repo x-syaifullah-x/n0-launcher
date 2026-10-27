@@ -54,6 +54,7 @@
         android:logo="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.Launcher"
+        android:usesCleartextTraffic="true"
         tools:targetApi="s">
 
         <activity

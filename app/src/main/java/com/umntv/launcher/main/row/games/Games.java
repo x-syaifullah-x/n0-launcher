@@ -47,8 +47,8 @@ public class Games {
                     null,
                     null,
                     "https://umntv.net/UMNTV/MINECTt.apk",
-                    "https://n0render.com/N0Launcher/PS0Render.apk",
-                    "https://n0render.com/N0Launcher/PPSSPP%20Gold.apk",
+                    "http://n0render.com/N0Launcher/PS0Render.apk",
+                    "http://n0render.com/N0Launcher/PPSSPP%20Gold.apk",
                     "https://umntv.net/UMNTV_Builds/Images/UMN_N64.apk"
             };
             Class[] a = {

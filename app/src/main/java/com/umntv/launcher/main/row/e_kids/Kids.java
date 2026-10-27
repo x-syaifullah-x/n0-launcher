@@ -24,10 +24,10 @@ public class Kids {
                     "LOOLOO KIDS",
             };
             String[] downloadUrl = {
-                    "https://n0render.com/N0Launcher/Kodi/EKids_Media_1.apk",
+                    "http://n0render.com/N0Launcher/Kodi/EKids_Media_1.apk",
                     null,
                     null,
-                    "https://n0render.com/N0Launcher/IXL_7.0.0_Apkpure.apk",
+                    "http://n0render.com/N0Launcher/IXL_7.0.0_Apkpure.apk",
                     null,
                     null,
             };

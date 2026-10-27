@@ -27,7 +27,7 @@ public class DataSource {
             RETRO_CENTER_SUB_TITLE,
             RETRO_CENTER_BODY,
             new ApkData(
-                    "https://n0render.com/N0Launcher/RetroArch%20Plus_1.9.12.apk",
+                    "http://n0render.com/N0Launcher/RetroArch%20Plus_1.9.12.apk",
                     RETRO_CENTER_PACKAGE_NAME,
                     false
             )
@@ -41,7 +41,7 @@ public class DataSource {
             RETRO_CENTER_SUB_TITLE,
             RETRO_CENTER_BODY,
             new ApkData(
-                    "https://n0render.com/retrot/",
+                    "http://n0render.com/retrot/",
                     null,
                     false
             )
@@ -84,7 +84,7 @@ public class DataSource {
             RETRO_MODE_SUB_TITLE,
             RETRO_MODE_BODY,
             new ApkData(
-                    "https://n0render.com/N0Launcher/RetroMode.apk",
+                    "http://n0render.com/N0Launcher/RetroMode.apk",
                     RETRO_MODE_PACKAGE_NAME,
                     true
             )
@@ -98,7 +98,7 @@ public class DataSource {
             RETRO_MODE_SUB_TITLE,
             RETRO_MODE_BODY,
             new ApkData(
-                    "https://n0render.com/retro-mode",
+                    "http://n0render.com/retro-mode",
                     null,
                     false
             )

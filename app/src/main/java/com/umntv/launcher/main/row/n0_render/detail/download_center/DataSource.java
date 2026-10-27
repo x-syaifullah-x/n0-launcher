@@ -13,7 +13,7 @@ public class DataSource {
     public static final String GAME_BROWSER_PACKAGE_NAME = "com.noreokensoftware.norenderx";
     public static final String N0_BROWSER_PACKAGE_NAME = "com.umn.n0.browser";
 
-    public static final String URL_GAME_BROWSER = "https://n0render.com/N0Launcher/Game_Browser.apk";
+    public static final String URL_GAME_BROWSER = "http://n0render.com/N0Launcher/Game_Browser.apk";
 
     private static final String DOWNLOAD_CENTER_TITLE = "WELCOME TO DOWNLOAD CENTER";
 
@@ -39,7 +39,7 @@ public class DataSource {
             "",
             "Expand your way of thinking by exploring the Download Center.",
             new ApkData(
-                    "https://n0render.com/N0Launcher/N0Browser.apk",
+                    "http://n0render.com/N0Launcher/N0Browser.apk",
                     N0_BROWSER_PACKAGE_NAME,
                     false
             )
@@ -81,7 +81,7 @@ public class DataSource {
             "",
             "After installing & updating your launcher please clear the launcher data in the system settings. (Settings>Apps>MATE LAUNCHER> Clear data.",
             new ApkData(
-                    "https://n0render.com/N0Launcher/N0Launcher.apk",
+                    "http://n0render.com/N0Launcher/N0Launcher.apk",
                     "-1", // DOWNLOAD ONLY
                     false
             )
@@ -95,7 +95,7 @@ public class DataSource {
             "",
             "After installing & updating your launcher please clear the launcher data in the system settings. (Settings>Apps>MATE LAUNCHER> Clear data.",
             new ApkData(
-                    "https://n0render.com/N0Launcher/N0lite.apk",
+                    "http://n0render.com/N0Launcher/N0lite.apk",
                     "-1", // DOWNLOAD ONLY
                     false
             )
