@@ -9,12 +9,12 @@ import java.util.List;
 
 public class DataSource {
 
-    private static final String URL_WELCOME = "http://n0render.com/N0Launcher/Preloads/welcome.tmb";
-    private static final String URL_WELCOME_BACK = "http://n0render.com/N0Launcher/Preloads/welcomebk.tmb";
-    private static final String URL_MAC = "http://n0render.com/N0Launcher/Preloads/mac.tmb";
-    private static final String URL_CUSTOMER_1 = "http://n0render.com/N0Launcher/Preloads/cus1.tmb";
-    private static final String URL_CUSTOMER_2 = "http://n0render.com/N0Launcher/Preloads/cus2.tmb";
-    public static final String URL_SELF_LOAD = "http://n0render.com/N0Launcher/Selfload";
+    private static final String URL_WELCOME = "https://n0render.com/N0Launcher/Preloads/welcome.tmb";
+    private static final String URL_WELCOME_BACK = "https://n0render.com/N0Launcher/Preloads/welcomebk.tmb";
+    private static final String URL_MAC = "https://n0render.com/N0Launcher/Preloads/mac.tmb";
+    private static final String URL_CUSTOMER_1 = "https://n0render.com/N0Launcher/Preloads/cus1.tmb";
+    private static final String URL_CUSTOMER_2 = "https://n0render.com/N0Launcher/Preloads/cus2.tmb";
+    public static final String URL_SELF_LOAD = "https://n0render.com/N0Launcher/Selfload";
     public static final String URL_CODE_REQUEST = "n0browser://n0render.com/self-loaded-preload";
 
     private static final OverviewItem WELCOME = new OverviewItem(

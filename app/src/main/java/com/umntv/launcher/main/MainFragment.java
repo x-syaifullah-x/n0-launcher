@@ -297,7 +297,7 @@ public class MainFragment extends BrowseSupportFragment {
             if (launchIntent != null) {
                 requireActivity().startActivity(launchIntent);
             } else {
-                ApkUtil.downloadToCacheDirAndInstall(requireContext(), "http://n0render.com/N0Launcher/tools/fx-file-explorer-9-0-1-2.apk");
+                ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://n0render.com/N0Launcher/tools/fx-file-explorer-9-0-1-2.apk");
             }
         });
 //        mInfo.setOnClickListener(view -> {
@@ -429,7 +429,7 @@ public class MainFragment extends BrowseSupportFragment {
         if (launchIntent != null) {
             requireActivity().startActivity(launchIntent);
         } else {
-            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "http://n0render.com/N0Launcher/tools/TeamViewerQS.apk");
+            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://n0render.com/N0Launcher/tools/TeamViewerQS.apk");
         }
     }
 
@@ -440,7 +440,7 @@ public class MainFragment extends BrowseSupportFragment {
         if (launchIntent != null) {
             requireActivity().startActivity(launchIntent);
         } else {
-            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "http://n0render.com/N0Launcher/tools/SOUND%20BOOST.apk");
+            ApkUtil.downloadToCacheDirAndInstall(requireContext(), "https://n0render.com/N0Launcher/tools/SOUND%20BOOST.apk");
         }
     }
 
