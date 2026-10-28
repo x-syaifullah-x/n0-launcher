@@ -77,7 +77,7 @@ public class NewsOrMediaRepository {
 
             String[] apkUrl = {
                     null,
-                    "http://n0render.com/N0Launcher/com.teamsmart.videomanager.tv_27.53-19.apk",
+                    "https://n0render.com/N0Launcher/com.teamsmart.videomanager.tv_27.53-19.apk",
                     null,
                     null,
                     null,

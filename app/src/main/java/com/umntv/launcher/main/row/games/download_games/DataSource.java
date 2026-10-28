@@ -18,7 +18,7 @@ public class DataSource {
             "PLAYSTATION offers unlimited online game-playing of the original Sony PlayStation.<br/>" +
                     "SD cards or memory sticks are recommended for game storage.<br/>See Instructors for more information.<br/><br/><font color='black'>NOTE: YOU WILL NEED TO DOWNLOAD THE PS1 BIOS FILE BEFORE PLAYING</font>",
             new ApkData(
-                    "http://n0render.com/ps1/",
+                    "https://n0render.com/ps1/",
                     "com.umn.n0.render",
                     false
             )
@@ -34,7 +34,7 @@ public class DataSource {
                     "SD cards or memory sticks are recommended for game storage.<br/>" +
                     "See Instructors for more information.<br/><br/><font color='black'>NOTE: SOME GAMES USERS WILL NEED TO ADJUST FAME SKIPPING</font>",
             new ApkData(
-                    "http://n0render.com/psp/",
+                    "https://n0render.com/psp/",
                     "com.umn.n0.render",
                     false
             )
@@ -49,7 +49,7 @@ public class DataSource {
             "NINTENDO 64 offers game-playing on the Nintendo 64.\n" +
                     "SD cards or memory sticks are recommended for game storage.\nSee Instructors for more information.",
             new ApkData(
-                    "http://n0render.com/n64/",
+                    "https://n0render.com/n64/",
                     "com.umn.n0.render",
                     false
             )
@@ -63,7 +63,7 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "",
             new ApkData(
-                    "http://n0render.com/inst",
+                    "https://n0render.com/inst",
                     "com.umn.n0.render",
                     false
             )
