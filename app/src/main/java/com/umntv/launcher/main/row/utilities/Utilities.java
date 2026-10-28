@@ -61,7 +61,7 @@ public class Utilities {
         };
 
         String[] linkApkDownload = {
-                "http://n0render.com/N0Launcher/tools/fx-file-explorer-9-0-1-2.apk",
+                "https://n0render.com/N0Launcher/tools/fx-file-explorer-9-0-1-2.apk",
                 null,
                 "https://umntv.net/UMNTV/wireless.apk",
 //                null,

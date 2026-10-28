@@ -31,7 +31,7 @@ public class DataSource {
             "Please contact us if you need any support",
             "",
             new ApkData(
-                    "http://n0render.com/tech-support",
+                    "https://n0render.com/tech-support",
                     "",
                     false
             )

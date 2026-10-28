@@ -24,7 +24,7 @@ public class DownloadCenterDetailFragment extends BaseDetailFragment {
 
     @Override
     protected void openOrDownload(ApkData apkData) {
-        if (apkData.url.contains("http://n0render.com/dc")) {
+        if (apkData.url.contains("https://n0render.com/dc")) {
             Uri uri = Uri.parse(apkData.url);
             Intent i = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(i);
