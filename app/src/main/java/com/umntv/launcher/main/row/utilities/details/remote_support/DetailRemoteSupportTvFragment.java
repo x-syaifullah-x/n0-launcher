@@ -61,7 +61,7 @@ public class DetailRemoteSupportTvFragment extends BaseDetailFragment {
         if (isApkUpload) {
             new DialogEnterCode(requireContext(), "Download And Install")
                     .setOnConfirmListener(code -> {
-                        String link = "http://n0render.com/N0Launcher/apkinstaller/" + code + ".apk";
+                        String link = "https://n0render.com/N0Launcher/apkinstaller/" + code + ".apk";
                         ApkUtil.downloadToCacheDirAndInstall(requireContext(), link);
                     }).show();
             return;

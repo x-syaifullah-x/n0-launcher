@@ -19,7 +19,7 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "Jade Cinema is a Kodi-based platform that allows users to search for TV shows and movies specifically in Asian countries.\n\nSpecial Thanks to XBMC | Abu Bakar | Syaifullah | IC Network",
             new ApkData(
-                    "http://n0render.com/N0Launcher/Kodi/Asian_Media_1.apk",
+                    "https://n0render.com/N0Launcher/Kodi/Asian_Media_1.apk",
                     "tv.lets.asianmedia",
                     false
             )
@@ -33,7 +33,7 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "Jade anime allows users to search for their favorite anime movies and series.",
             new ApkData(
-                    "http://n0render.com/N0Launcher/Kodi/Anime_.apk",
+                    "https://n0render.com/N0Launcher/Kodi/Anime_.apk",
                     "tv.lets.anime",
                     false
             )
@@ -47,7 +47,7 @@ public class DataSource {
             OverviewItem.SUBTITLE_DEFAULT,
             "Jade Cinema 18 + live chat allows users to view and chat with live Asian women, men, and couples. It also gives you an unlimited supply of xxx, videos, movies, and clips.<br/>Users must be 18 years of age or older.",
             new ApkData(
-                    "http://n0render.com/N0Launcher/Kodi/Asian_Chat_1.apk",
+                    "https://n0render.com/N0Launcher/Kodi/Asian_Chat_1.apk",
                     PACKAGE_ASIAN_LIVE_CHAT,
                     true
             )
